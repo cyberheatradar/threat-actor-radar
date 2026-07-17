@@ -1,0 +1,35 @@
+{
+  "data_version": "v0.2.0",
+  "files": [
+    {
+      "bytes": 2623,
+      "path": "data/actors.json",
+      "sha256": "sha256:5b76b45b921c4abd7ec6bf7075574bb6299ebe84e03cc436b742b6641efaf99f"
+    },
+    {
+      "bytes": 246998,
+      "path": "data/relationships.json",
+      "sha256": "sha256:57f7abbf12f0349c8d544ae56d5f0fbb9778aecade8e7123e66776f668b9b8fd"
+    },
+    {
+      "bytes": 2256,
+      "path": "data/sources.json",
+      "sha256": "sha256:6053b2d7643c8c8cd329a89c64daa8063bb6b2a9a2f6086cb62e317b29074e0d"
+    },
+    {
+      "bytes": 8824,
+      "path": "schema.json",
+      "sha256": "sha256:c3340a07c20e6ce8149ad8735b6826245890f0b93b92e69be14ed80ce46b32dd"
+    },
+    {
+      "bytes": 536,
+      "path": "validation-report.json",
+      "sha256": "sha256:9345111621717f7413695d8b026d065be9696255e5fb6cb24d31857486ccbb40"
+    }
+  ],
+  "projection_version": "current-state-v1",
+  "public_schema_version": "v1",
+  "schema": "threatactorradar.build-manifest/v1",
+  "snapshot_at": "2026-07-17T09:47:02.416753+09:00",
+  "system_version": "v0.12.2-dev"
+}

@@ -1,0 +1,403 @@
+{
+  "$defs": {
+    "actor": {
+      "additionalProperties": false,
+      "properties": {
+        "actor_types": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "entity_type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^tar_actor_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "entity_type",
+        "actor_types",
+        "aliases"
+      ],
+      "type": "object"
+    },
+    "actorsDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "actors": {
+          "items": {
+            "$ref": "#/$defs/actor"
+          },
+          "type": "array"
+        },
+        "data_version": {
+          "const": "v0.1.0"
+        },
+        "schema": {
+          "const": "threatactorradar.public-actors/v1"
+        }
+      },
+      "required": [
+        "schema",
+        "data_version",
+        "actors"
+      ],
+      "type": "object"
+    },
+    "command": {
+      "additionalProperties": false,
+      "properties": {
+        "defanged_indicators": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "value"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^tar_command_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "redaction_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "representation": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "type": "string"
+        },
+        "shell": {
+          "type": "string"
+        },
+        "source_redaction_present": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "shell",
+        "representation",
+        "redaction_count",
+        "source_redaction_present",
+        "defanged_indicators"
+      ],
+      "type": "object"
+    },
+    "evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "excerpt": {
+          "maxLength": 280,
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^tar_source_[0-9a-f]{24}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "excerpt"
+      ],
+      "type": "object"
+    },
+    "relationship": {
+      "additionalProperties": false,
+      "properties": {
+        "actor_id": {
+          "pattern": "^tar_actor_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "explicit",
+            "strongly_supported",
+            "contextual",
+            "inferred"
+          ]
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^tar_relationship_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "predicate": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resolution_method": {
+          "enum": [
+            "deterministic",
+            "human_corrected"
+          ]
+        },
+        "resolution_status": {
+          "const": "resolved"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^tar_source_[0-9a-f]{24}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "target_id": {
+          "pattern": "^tar_(technique|software|command)_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "target_type": {
+          "enum": [
+            "technique",
+            "software",
+            "command"
+          ]
+        },
+        "type": {
+          "enum": [
+            "actor_technique_relationship",
+            "actor_software_relationship",
+            "actor_command_relationship"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "actor_id",
+        "target_type",
+        "target_id",
+        "predicate",
+        "resolution_status",
+        "confidence",
+        "resolution_method",
+        "source_ids",
+        "evidence"
+      ],
+      "type": "object"
+    },
+    "relationshipsDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "commands": {
+          "items": {
+            "$ref": "#/$defs/command"
+          },
+          "type": "array"
+        },
+        "data_version": {
+          "const": "v0.1.0"
+        },
+        "relationships": {
+          "items": {
+            "$ref": "#/$defs/relationship"
+          },
+          "type": "array"
+        },
+        "schema": {
+          "const": "threatactorradar.public-relationships/v1"
+        },
+        "software": {
+          "items": {
+            "$ref": "#/$defs/software"
+          },
+          "type": "array"
+        },
+        "techniques": {
+          "items": {
+            "$ref": "#/$defs/technique"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "data_version",
+        "techniques",
+        "software",
+        "commands",
+        "relationships"
+      ],
+      "type": "object"
+    },
+    "software": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "id": {
+          "pattern": "^tar_software_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "software_type": {
+          "enum": [
+            "malware",
+            "tool"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "software_type",
+        "aliases"
+      ],
+      "type": "object"
+    },
+    "source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^tar_source_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "reliability": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "title": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "url",
+        "reliability"
+      ],
+      "type": "object"
+    },
+    "sourcesDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "data_version": {
+          "const": "v0.1.0"
+        },
+        "schema": {
+          "const": "threatactorradar.public-sources/v1"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema",
+        "data_version",
+        "sources"
+      ],
+      "type": "object"
+    },
+    "technique": {
+      "additionalProperties": false,
+      "properties": {
+        "attack_id": {
+          "pattern": "^T[0-9]{4}(\\.[0-9]{3})?$",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^tar_technique_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tactics": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "attack_id",
+        "name",
+        "tactics"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://threatactorradar.invalid/schema/public-bundle-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "actors": {
+      "$ref": "#/$defs/actorsDocument"
+    },
+    "relationships": {
+      "$ref": "#/$defs/relationshipsDocument"
+    },
+    "sources": {
+      "$ref": "#/$defs/sourcesDocument"
+    }
+  },
+  "required": [
+    "actors",
+    "relationships",
+    "sources"
+  ],
+  "title": "ThreatActorRadar Public Data Bundle v1",
+  "type": "object"
+}

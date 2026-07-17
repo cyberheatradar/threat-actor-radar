@@ -1,0 +1,121 @@
+{
+  "actors": [
+    {
+      "actor_types": [
+        "intrusion-set"
+      ],
+      "aliases": [
+        "GOLD IONIC"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_00d633b262aa62d112d43f82",
+      "name": "INC Ransom"
+    },
+    {
+      "actor_types": [
+        "intrusion-set"
+      ],
+      "aliases": [
+        "DEV-0243",
+        "Evil Corp",
+        "Manatee Tempest",
+        "UNC2165"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_1d9cb2697c38b62f5b89465e",
+      "name": "Indrik Spider"
+    },
+    {
+      "actor_types": [
+        "cloud-focused",
+        "cybercriminal",
+        "supply-chain"
+      ],
+      "aliases": [
+        "DeadCatx3",
+        "PCPcat",
+        "SHADOW-WATER-058",
+        "ShellForce"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_49ddcf6ca5281ad34be31a13",
+      "name": "TeamPCP"
+    },
+    {
+      "actor_types": [
+        "intrusion-set"
+      ],
+      "aliases": [
+        "Camouflage Tempest",
+        "ITG08",
+        "Magecart Group 6",
+        "Skeleton Spider",
+        "TAAL"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_4ae86ad3c963b2c803e12f46",
+      "name": "FIN6"
+    },
+    {
+      "actor_types": [
+        "intrusion-set"
+      ],
+      "aliases": [
+        "APT10",
+        "BRONZE RIVERSIDE",
+        "Cicada",
+        "CVNX",
+        "HOGFISH",
+        "POTASSIUM",
+        "Red Apollo",
+        "Stone Panda"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_89cd8cc744b5ddc0baee5044",
+      "name": "menuPass"
+    },
+    {
+      "actor_types": [
+        "cyberespionage",
+        "intrusion-set"
+      ],
+      "aliases": [
+        "Earth Kasha"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_96d4d38ba100fff9a7473b1f",
+      "name": "MirrorFace"
+    },
+    {
+      "actor_types": [
+        "cybercriminal",
+        "ransomware-as-a-service"
+      ],
+      "aliases": [],
+      "entity_type": "ransomware_operation",
+      "id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "name": "The Gentlemen"
+    },
+    {
+      "actor_types": [
+        "intrusion-set"
+      ],
+      "aliases": [
+        "BELUGASTURGEON",
+        "Group 88",
+        "IRON HUNTER",
+        "Krypton",
+        "Secret Blizzard",
+        "Snake",
+        "Venomous Bear",
+        "Waterbug",
+        "WhiteBear"
+      ],
+      "entity_type": "threat_actor_group",
+      "id": "tar_actor_e869348b9ce52f4047feb5d3",
+      "name": "Turla"
+    }
+  ],
+  "data_version": "v0.2.0",
+  "schema": "threatactorradar.public-actors/v1"
+}
