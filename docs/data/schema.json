@@ -1,5 +1,330 @@
 {
   "$defs": {
+    "actionEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "block_index": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "excerpt": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^tar_evidence_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "order": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_id": {
+          "pattern": "^tar_source_[0-9a-f]{24}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "excerpt",
+        "order",
+        "block_index"
+      ],
+      "type": "object"
+    },
+    "actionObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "action_time_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "action_type": {
+          "enum": [
+            "action",
+            "malware_behavior"
+          ]
+        },
+        "activity_id": {
+          "pattern": "^tar_activity_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "actor_id": {
+          "pattern": "^tar_actor_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "assertion": {
+          "enum": [
+            "observed",
+            "observed_capability",
+            "observed_telemetry",
+            "observed_with_limited_detail",
+            "likely",
+            "possible"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "date_basis": {
+          "enum": [
+            "explicit_source_date",
+            "explicit_source_month",
+            "bounded_source_range",
+            "unresolved"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/actionEvidence"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "first_seen": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "flow_node_id": {
+          "pattern": "^flow-node:[A-Za-z0-9:_-]+$",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^tar_action_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "label": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "last_seen": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relationship_ids": {
+          "items": {
+            "pattern": "^tar_relationship_[0-9a-f]{24}$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope_slug": {
+          "pattern": "^[a-z0-9-]+$",
+          "type": "string"
+        },
+        "sequence_hint": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^tar_source_[0-9a-f]{24}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "activity_id",
+        "actor_id",
+        "flow_node_id",
+        "scope_slug",
+        "action_type",
+        "label",
+        "description",
+        "assertion",
+        "confidence",
+        "action_time_text",
+        "first_seen",
+        "last_seen",
+        "date_basis",
+        "sequence_hint",
+        "source_ids",
+        "relationship_ids",
+        "evidence"
+      ],
+      "type": "object"
+    },
+    "activitiesDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/actionObservation"
+          },
+          "type": "array"
+        },
+        "activities": {
+          "items": {
+            "$ref": "#/$defs/activity"
+          },
+          "type": "array"
+        },
+        "data_version": {
+          "type": "string"
+        },
+        "schema": {
+          "const": "threatactorradar.public-activities/v1"
+        }
+      },
+      "required": [
+        "schema",
+        "data_version",
+        "activities",
+        "actions"
+      ],
+      "type": "object"
+    },
+    "activity": {
+      "additionalProperties": false,
+      "properties": {
+        "actor_id": {
+          "pattern": "^tar_actor_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "date_basis": {
+          "enum": [
+            "explicit_source_date",
+            "explicit_source_month",
+            "bounded_source_range",
+            "unresolved"
+          ]
+        },
+        "date_precision": {
+          "enum": [
+            "day",
+            "month",
+            "year",
+            "unknown"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/activityEvidence"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "first_seen": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "flow_path": {
+          "pattern": "^attack-flows/[a-z0-9-]+/\\?scope=[a-z0-9-]+$",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^tar_activity_[0-9a-f]{24}$",
+          "type": "string"
+        },
+        "last_seen": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "relationship_ids": {
+          "items": {
+            "pattern": "^tar_relationship_[0-9a-f]{24}$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^tar_source_[0-9a-f]{24}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "type": {
+          "enum": [
+            "campaign",
+            "incident",
+            "operation"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "actor_id",
+        "name",
+        "description",
+        "first_seen",
+        "last_seen",
+        "date_basis",
+        "date_precision",
+        "source_ids",
+        "relationship_ids",
+        "evidence",
+        "flow_path"
+      ],
+      "type": "object"
+    },
+    "activityEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "excerpt": {
+          "maxLength": 280,
+          "minLength": 1,
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "scope",
+            "date",
+            "attribution",
+            "summary"
+          ]
+        },
+        "source_id": {
+          "pattern": "^tar_source_[0-9a-f]{24}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "excerpt",
+        "role"
+      ],
+      "type": "object"
+    },
     "actor": {
       "additionalProperties": false,
       "properties": {
@@ -300,6 +625,13 @@
           "pattern": "^tar_source_[0-9a-f]{24}$",
           "type": "string"
         },
+        "published_at": {
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "reliability": {
           "enum": [
             "high",
@@ -383,6 +715,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
+    "activities": {
+      "$ref": "#/$defs/activitiesDocument"
+    },
     "actors": {
       "$ref": "#/$defs/actorsDocument"
     },

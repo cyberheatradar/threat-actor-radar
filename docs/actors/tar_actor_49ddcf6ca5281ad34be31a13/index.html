@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ThreatActorRadar profile for TeamPCP">
   <title>TeamPCP · ThreatActorRadar</title>
-  <link rel="stylesheet" href="../../assets/app.css?v=v0.12.2-dev">
-  <script defer src="../../assets/app.js?v=v0.12.2-dev"></script>
+  <link rel="stylesheet" href="../../assets/app.css?v=v0.14.7">
+  <script defer src="../../assets/app.js?v=v0.14.7"></script>
 </head>
 <body data-page="actor-detail">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,15 +14,294 @@
     <div class="shell header-row">
       <div class="brand-cluster">
         <a class="brand" href="../../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
-        <div class="build-meta" aria-label="Build version"><strong>v0.12.2-dev</strong></div>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.7</strong></div>
       </div>
-      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/" aria-current="page" class="active">Actors</a><a href="../../relationships/">Relationships</a><a href="../../sources/">Sources</a></nav>
+      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/" aria-current="page" class="active">Actors</a><a href="../../activities/">Activities</a><a href="../../relationships/">Relationships</a><a href="../../attack-flows/">Attack Flows</a><a href="../../sources/">Sources</a></nav>
     </div>
   </header>
   <main id="main" class="shell">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Actors</a><span aria-hidden="true">/</span><span>TeamPCP</span></nav>
 <section class="page-title detail-title"><p class="eyebrow">Threat Actor Group</p><h1>TeamPCP</h1><div><span class="badge">Cloud Focused</span><span class="badge">Cybercriminal</span><span class="badge">Supply Chain</span></div></section>
-<section class="detail-grid"><article class="panel"><h2>Aliases</h2><ul><li>DeadCatx3</li><li>PCPcat</li><li>SHADOW-WATER-058</li><li>ShellForce</li></ul></article><article class="panel"><h2>Coverage</h2><dl><dt>Relationships</dt><dd><strong>25</strong></dd><dt>ATT&amp;CK techniques</dt><dd><strong>24</strong></dd></dl></article></section>
+
+<section class="detail-grid actor-overview"><article class="panel"><h2>Aliases</h2><ul><li>DeadCatx3</li><li>PCPcat</li><li>SHADOW-WATER-058</li><li>ShellForce</li></ul></article><article class="panel"><h2>Coverage</h2><dl><dt>Relationships</dt><dd><strong>25</strong></dd><dt>Sources</dt><dd><strong>2</strong></dd><dt>ATT&amp;CK techniques</dt><dd><strong>24</strong></dd><dt>Software</dt><dd><strong>1</strong></dd><dt>Commands</dt><dd><strong>0</strong></dd><dt>First source publication</dt><dd>2026-03-31</dd><dt>Latest source publication</dt><dd>2026-05-13</dd><dt>Confidence</dt><dd>Explicit 1, Strongly Supported 24</dd></dl></article></section>
+<nav class="actor-tabs" role="tablist" aria-label="Actor intelligence views" data-actor-tabs>
+  <button id="actor-tab-activity" class="actor-tab active" type="button" role="tab" aria-selected="true" aria-controls="actor-panel-activity" data-actor-tab="activity">Activity history</button>
+  <button id="actor-tab-evidence" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-evidence" data-actor-tab="evidence">Evidence chronology</button>
+  <button id="actor-tab-techniques" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-techniques" data-actor-tab="techniques">Techniques</button>
+  <button id="actor-tab-relationships" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-relationships" data-actor-tab="relationships">Relationships</button>
+</nav>
+<section id="actor-panel-activity" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-activity" data-actor-tab-panel="activity">
+<section class="activity-section" data-actor-activity-root>
+  <div class="section-head"><div><p class="eyebrow">Activity history</p><h2>Actor activity timeline</h2></div><p>2 report-level milestone(s)</p></div>
+  <p class="timeline-note">Milestones are ordered only by source publication date. They do not claim the activity happened on that date. Campaign or incident boundaries and activity dates are added only when deterministic extraction establishes them.</p>
+  <div class="activity-path-viewport" tabindex="0" aria-label="Actor activity timeline"><div class="activity-path"><a class="activity-milestone" href="#tar_activity_613b556648d0eca6cd86293a" data-activity-milestone>
+  <span class="activity-milestone-date">2026-03-31</span>
+  <strong>Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</strong>
+  <small>4 relationship(s) · report-level milestone</small>
+  <span class="activity-chip-row"><span class="activity-chip">operates TeamPCP cloud stealer</span><span class="activity-chip">T1021.007 · uses Cloud Services</span><span class="activity-chip">T1059 · uses Command and Scripting Interpreter</span><span class="activity-chip muted">+1 more</span></span>
+</a><span class="activity-arrow" aria-hidden="true">→</span><a class="activity-milestone" href="#tar_activity_4760a2f618216bb76308db82" data-activity-milestone>
+  <span class="activity-milestone-date">2026-05-13</span>
+  <strong>Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</strong>
+  <small>21 relationship(s) · report-level milestone</small>
+  <span class="activity-chip-row"><span class="activity-chip">T1547 · uses Boot or Logon Autostart Execution</span><span class="activity-chip">T1552.005 · uses Cloud Instance Metadata API</span><span class="activity-chip">T1526 · uses Cloud Service Discovery</span><span class="activity-chip muted">+18 more</span></span>
+</a></div></div>
+  <div class="activity-records"><article class="activity-record" id="tar_activity_613b556648d0eca6cd86293a" data-activity-record data-source-id="tar_source_840f177f8bc026ea670b58bf">
+  <div class="activity-record-head"><div><p class="eyebrow">Source-backed activity report</p><h3>Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</h3></div><div class="activity-record-date"><strong>2026-03-31</strong><small>Source published</small></div></div>
+
+  <p class="activity-record-summary">4 canonical Relationship reference(s) · Software 1, Technique 3. Evidence remains owned by canonical Relationship or Activity EvidenceSpan records and is not duplicated into the timeline.</p>
+  <ul class="activity-relationship-list"><li><a href="../../relationships/tar_relationship_22333b2fd4d7b2051b6b1a3e/">operates TeamPCP cloud stealer</a> <span class="badge confidence">Explicit</span></li><li><a href="../../relationships/tar_relationship_d97fc20bc8a148e1be5f896a/">T1021.007 · uses Cloud Services</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_698c5cca57d465628722a74a/">T1059 · uses Command and Scripting Interpreter</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_2e4d49f4ad57c145cb53deed/">T1074 · uses Data Staged</a> <span class="badge confidence">Strongly Supported</span></li></ul>
+  <div class="timeline-links"><a href="../../sources/tar_source_840f177f8bc026ea670b58bf/">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</a><a href="https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks" rel="noopener noreferrer">Open source</a></div>
+</article><article class="activity-record" id="tar_activity_4760a2f618216bb76308db82" data-activity-record data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="activity-record-head"><div><p class="eyebrow">Source-backed activity report</p><h3>Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</h3></div><div class="activity-record-date"><strong>2026-05-13</strong><small>Source published</small></div></div>
+
+  <p class="activity-record-summary">21 canonical Relationship reference(s) · Technique 21. Evidence remains owned by canonical Relationship or Activity EvidenceSpan records and is not duplicated into the timeline.</p>
+  <ul class="activity-relationship-list"><li><a href="../../relationships/tar_relationship_1aae49094aab0ec833d8c882/">T1547 · uses Boot or Logon Autostart Execution</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_26064c259c9deb1222012e99/">T1552.005 · uses Cloud Instance Metadata API</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_ebeaa0b96002e4db7fb3c60e/">T1526 · uses Cloud Service Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_97e26887caa2370f51c08eca/">T1195.002 · uses Compromise Software Supply Chain</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_47a582d48196d89d5654a8b7/">T1613 · uses Container and Resource Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_2dc517cee684366a7c079ecd/">T1552.001 · uses Credentials In Files</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_781c16900243e07089c994a1/">T1530 · uses Data from Cloud Storage</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_f4b6cc96365d4ce0159362eb/">T1005 · uses Data from Local System</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_4d840ca3ef396b9d28aa5834/">T1102.001 · uses Dead Drop Resolver</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_9b93d599089fda75709424a5/">T1041 · uses Exfiltration Over C2 Channel</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_a7fee0420629e693ec69f54b/">T1567 · uses Exfiltration Over Web Service</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_e98e5bd73a5bdd14981551c0/">T1070.004 · uses File Deletion</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_cf99d41179f09fe61914b6bf/">T1657 · uses Financial Theft</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_970602e7a3e9686fc2f5f7f0/">T1059.007 · uses JavaScript</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3da5ea68eb8ee5c64a911377/">T1027 · uses Obfuscated Files or Information</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_428eab455a30df7367fdbd7c/">T1059.006 · uses Python</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_0c4224dfec7caa3221695a65/">T1528 · uses Steal Application Access Token</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_fc4bbea8b4d8d3e364a1569d/">T1199 · uses Trusted Relationship</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_7d1a88ed32e64b4153eb8642/">T1059.004 · uses Unix Shell</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_81dccdd2dce84997fa1fb9fa/">T1078 · uses Valid Accounts</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_f71cf1928e4821708e39e52d/">T1071.001 · uses Web Protocols</a> <span class="badge confidence">Strongly Supported</span></li></ul>
+  <div class="timeline-links"><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+</article></div>
+</section>
+</section>
+<section id="actor-panel-evidence" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-evidence" data-actor-tab-panel="evidence" hidden>
+<section class="timeline-section" data-timeline-root>
+  <div class="section-head"><div><p class="eyebrow">Evidence chronology</p><h2>Relationship evidence events</h2></div><p>25 source-backed event(s)</p></div>
+  <p class="timeline-note">Dates are source publication dates only. Missing dates are not inferred; each event remains linked to its canonical Relationship and source.</p>
+  <section class="timeline-filters" data-timeline-filters>
+  <div class="filter-field filter-search"><label for="timeline-search">Search</label><input id="timeline-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-timeline-search></div>
+  <div class="filter-field"><label for="timeline-type">Type</label><select id="timeline-type" data-timeline-target-type><option value="">All types</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
+  <div class="filter-field"><label for="timeline-confidence">Confidence</label><select id="timeline-confidence" data-timeline-confidence><option value="">All confidence</option><option value="explicit">Explicit</option><option value="strongly_supported">Strongly Supported</option></select></div>
+  <div class="filter-field"><label for="timeline-source">Source</label><select id="timeline-source" data-timeline-source><option value="">All sources</option><option value="tar_source_71967503afd8c6ca264cc5ff">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</option><option value="tar_source_840f177f8bc026ea670b58bf">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</option></select></div>
+  <div class="filter-field"><label for="timeline-order">Order</label><select id="timeline-order" data-timeline-order><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
+  <button class="button secondary filter-reset" type="button" data-timeline-reset>Clear</button>
+  <p class="search-status" aria-live="polite"><span data-timeline-visible-count>0</span> matching event(s)</p>
+</section>
+  <div class="timeline-list" data-timeline-list><article class="timeline-event" id="evidence-ddbb66e1dc003ceba81106a3" data-timeline-item data-event-id="ddbb66e1dc003ceba81106a3" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses boot or logon autostart execution technique t1547 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1547</span></div>
+    <h3>uses Boot or Logon Autostart Execution</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_1aae49094aab0ec833d8c882/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-5bb60ece09f098e64a065f54" data-timeline-item data-event-id="5bb60ece09f098e64a065f54" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses cloud instance metadata api technique t1552.005 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1552.005</span></div>
+    <h3>uses Cloud Instance Metadata API</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_26064c259c9deb1222012e99/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7809feda0f5fee6345d56563" data-timeline-item data-event-id="7809feda0f5fee6345d56563" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses cloud service discovery technique t1526 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1526</span></div>
+    <h3>uses Cloud Service Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_ebeaa0b96002e4db7fb3c60e/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-f7a8b3159dccbcc0e226f816" data-timeline-item data-event-id="f7a8b3159dccbcc0e226f816" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses compromise software supply chain technique t1195.002 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1195.002</span></div>
+    <h3>uses Compromise Software Supply Chain</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_97e26887caa2370f51c08eca/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4f9bd3bbdb3bed5d10a35b84" data-timeline-item data-event-id="4f9bd3bbdb3bed5d10a35b84" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses container and resource discovery technique t1613 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1613</span></div>
+    <h3>uses Container and Resource Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_47a582d48196d89d5654a8b7/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-f561cafb439360319c41a290" data-timeline-item data-event-id="f561cafb439360319c41a290" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses credentials in files technique t1552.001 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1552.001</span></div>
+    <h3>uses Credentials In Files</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_2dc517cee684366a7c079ecd/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-a25e3ec6b08f2f8cf6d4e47a" data-timeline-item data-event-id="a25e3ec6b08f2f8cf6d4e47a" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses data from cloud storage technique t1530 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1530</span></div>
+    <h3>uses Data from Cloud Storage</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_781c16900243e07089c994a1/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-237740d03e75d5d9d238f46b" data-timeline-item data-event-id="237740d03e75d5d9d238f46b" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses data from local system technique t1005 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1005</span></div>
+    <h3>uses Data from Local System</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_f4b6cc96365d4ce0159362eb/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-cfa3aca1d0ac15cf22954fdc" data-timeline-item data-event-id="cfa3aca1d0ac15cf22954fdc" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses dead drop resolver technique t1102.001 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1102.001</span></div>
+    <h3>uses Dead Drop Resolver</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_4d840ca3ef396b9d28aa5834/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c52a6f8623c3244775669564" data-timeline-item data-event-id="c52a6f8623c3244775669564" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses exfiltration over c2 channel technique t1041 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1041</span></div>
+    <h3>uses Exfiltration Over C2 Channel</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_9b93d599089fda75709424a5/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4c71dbec23d78fb01748a5d8" data-timeline-item data-event-id="4c71dbec23d78fb01748a5d8" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses exfiltration over web service technique t1567 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1567</span></div>
+    <h3>uses Exfiltration Over Web Service</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_a7fee0420629e693ec69f54b/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-887cb3f5610ba5a48db99163" data-timeline-item data-event-id="887cb3f5610ba5a48db99163" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses file deletion technique t1070.004 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1070.004</span></div>
+    <h3>uses File Deletion</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_e98e5bd73a5bdd14981551c0/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4812370f27987b4defeb5fe9" data-timeline-item data-event-id="4812370f27987b4defeb5fe9" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses financial theft technique t1657 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1657</span></div>
+    <h3>uses Financial Theft</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_cf99d41179f09fe61914b6bf/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7d4acd29553c544d4b576956" data-timeline-item data-event-id="7d4acd29553c544d4b576956" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses javascript technique t1059.007 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059.007</span></div>
+    <h3>uses JavaScript</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_970602e7a3e9686fc2f5f7f0/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-e5f086696783528719dfd863" data-timeline-item data-event-id="e5f086696783528719dfd863" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses obfuscated files or information technique t1027 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1027</span></div>
+    <h3>uses Obfuscated Files or Information</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3da5ea68eb8ee5c64a911377/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-f378fcf4954144f4143ad48d" data-timeline-item data-event-id="f378fcf4954144f4143ad48d" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses python technique t1059.006 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059.006</span></div>
+    <h3>uses Python</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_428eab455a30df7367fdbd7c/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c6d027c82ba59f22f1be48e0" data-timeline-item data-event-id="c6d027c82ba59f22f1be48e0" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses steal application access token technique t1528 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1528</span></div>
+    <h3>uses Steal Application Access Token</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_0c4224dfec7caa3221695a65/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-b001d0100b0d69eae4903d68" data-timeline-item data-event-id="b001d0100b0d69eae4903d68" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses trusted relationship technique t1199 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1199</span></div>
+    <h3>uses Trusted Relationship</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_fc4bbea8b4d8d3e364a1569d/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4a8806b7af51db698d92f94b" data-timeline-item data-event-id="4a8806b7af51db698d92f94b" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses unix shell technique t1059.004 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059.004</span></div>
+    <h3>uses Unix Shell</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_7d1a88ed32e64b4153eb8642/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-a39716c2ad6b5756adb5d190" data-timeline-item data-event-id="a39716c2ad6b5756adb5d190" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses valid accounts technique t1078 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1078</span></div>
+    <h3>uses Valid Accounts</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_81dccdd2dce84997fa1fb9fa/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-d4c2c28a8bf611f3b19bb075" data-timeline-item data-event-id="d4c2c28a8bf611f3b19bb075" data-event-date="2026-05-13T00:00:00Z" data-search-text="teampcp uses web protocols technique t1071.001 strongly_supported analyzing teampcp’s supply chain attacks: checkmarx kics and elementary-data in ci/cd credential theft high mitre att&amp;ck mapping" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_71967503afd8c6ca264cc5ff">
+  <div class="timeline-date"><time datetime="2026-05-13T00:00:00Z">2026-05-13</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1071.001</span></div>
+    <h3>uses Web Protocols</h3>
+    <p class="excerpt">MITRE ATT&amp;CK mapping</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_71967503afd8c6ca264cc5ff/">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_f71cf1928e4821708e39e52d/">View evidence</a><a href="#tar_activity_4760a2f618216bb76308db82">View activity record</a><a href="https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-fc9cb5b8926250c6ef87b1fb" data-timeline-item data-event-id="fc9cb5b8926250c6ef87b1fb" data-event-date="2026-03-31T21:00:39Z" data-search-text="teampcp uses cloud services technique t1021.007 strongly_supported weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high // title: teampcp network artifacts // description: aws and kube api interaction from a single python process indicative of the enumeration and lateral movement observed by teampcp // mitre att&amp;ck ttp id: t1021.007 dataset = xdr_data | fields event_type , event_id , event_sub_ty…" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_840f177f8bc026ea670b58bf">
+  <div class="timeline-date"><time datetime="2026-03-31T21:00:39Z">2026-03-31</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1021.007</span></div>
+    <h3>uses Cloud Services</h3>
+    <p class="excerpt">// Title: TeamPCP Network Artifacts // Description: AWS and Kube API interaction from a single python process indicative of the enumeration and lateral movement observed by TeamPCP // MITRE ATT&amp;CK TTP ID: T1021.007 dataset = xdr_data | fields event_type , event_id , event_sub_ty…</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_840f177f8bc026ea670b58bf/">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_d97fc20bc8a148e1be5f896a/">View evidence</a><a href="#tar_activity_613b556648d0eca6cd86293a">View activity record</a><a href="https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-1c0647b7cee74c382689a361" data-timeline-item data-event-id="1c0647b7cee74c382689a361" data-event-date="2026-03-31T21:00:39Z" data-search-text="teampcp uses command and scripting interpreter technique t1059 strongly_supported weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high // title: teampcp process execution artifacts // description: identifies hardcoded components in the deployed payloads - relies on the fact that the python process is being used to execute sub processes with hardcoded command parameters // mitre att&amp;ck ttp id: t1059 config case_…" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_840f177f8bc026ea670b58bf">
+  <div class="timeline-date"><time datetime="2026-03-31T21:00:39Z">2026-03-31</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059</span></div>
+    <h3>uses Command and Scripting Interpreter</h3>
+    <p class="excerpt">// Title: TeamPCP Process Execution Artifacts // Description: Identifies hardcoded components in the deployed payloads - relies on the fact that the python process is being used to execute sub processes with hardcoded command parameters // MITRE ATT&amp;CK TTP ID: T1059 config case_…</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_840f177f8bc026ea670b58bf/">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_698c5cca57d465628722a74a/">View evidence</a><a href="#tar_activity_613b556648d0eca6cd86293a">View activity record</a><a href="https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c2535d3a332ce26f5aa962f7" data-timeline-item data-event-id="c2535d3a332ce26f5aa962f7" data-event-date="2026-03-31T21:00:39Z" data-search-text="teampcp uses data staged technique t1074 strongly_supported weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high // title: teampcp file creation artifacts // description: identifies file artifacts related to the teampcp enumeration, persistence and exfiltration activity // mitre att&amp;ck ttp id: t1074 dataset = xdr_data | fields event_type , event_id , event_sub_type , actor_process_image_pa…" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_840f177f8bc026ea670b58bf">
+  <div class="timeline-date"><time datetime="2026-03-31T21:00:39Z">2026-03-31</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1074</span></div>
+    <h3>uses Data Staged</h3>
+    <p class="excerpt">// Title: TeamPCP File Creation Artifacts // Description: Identifies file artifacts related to the TeamPCP enumeration, persistence and exfiltration activity // MITRE ATT&amp;CK TTP ID: T1074 dataset = xdr_data | fields event_type , event_id , event_sub_type , actor_process_image_pa…</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_840f177f8bc026ea670b58bf/">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_2e4d49f4ad57c145cb53deed/">View evidence</a><a href="#tar_activity_613b556648d0eca6cd86293a">View activity record</a><a href="https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-d7fb5ce37d522c00b964e4fa" data-timeline-item data-event-id="d7fb5ce37d522c00b964e4fa" data-event-date="2026-03-31T21:00:39Z" data-search-text="teampcp operates teampcp cloud stealer software  explicit weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high teampcp" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_840f177f8bc026ea670b58bf">
+  <div class="timeline-date"><time datetime="2026-03-31T21:00:39Z">2026-03-31</time><small>Source published</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>operates TeamPCP cloud stealer</h3>
+    <p class="excerpt">TeamPCP</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_840f177f8bc026ea670b58bf/">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_22333b2fd4d7b2051b6b1a3e/">View evidence</a><a href="#tar_activity_613b556648d0eca6cd86293a">View activity record</a><a href="https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article></div>
+</section>
+</section>
+<section id="actor-panel-techniques" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-techniques" data-actor-tab-panel="techniques" hidden>
 <section class="attack-section">
   <div class="section-head"><div><p class="eyebrow">MITRE ATT&amp;CK</p><h2>Enterprise technique matrix</h2></div><p>24 observed technique(s)</p></div>
   <p class="matrix-note">The full active ATT&amp;CK technique catalog is shown. Historical Defense Evasion remains beside current Stealth and Defense Impairment for longitudinal reporting. Green cells are resolved actor-technique relationships; unhighlighted cells are not evidence of absence.</p>
@@ -35,7 +314,10 @@
     </div>
   </div>
 </section>
+</section>
+<section id="actor-panel-relationships" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-relationships" data-actor-tab-panel="relationships" hidden>
 <section class="section-head"><div><p class="eyebrow">Evidence graph</p><h2>Relationships</h2></div></section>
+<div data-relationship-filter-root>
 <section class="relationship-filters" data-relationship-filters>
   <div class="filter-field filter-search"><label for="relationship-search">Search</label><input id="relationship-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-filter-search></div>
   <div class="filter-field"><label for="relationship-type">Type</label><select id="relationship-type" data-filter-target-type><option value="">All types</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
@@ -44,7 +326,7 @@
   <button class="button secondary filter-reset" type="button" data-filter-reset>Clear</button>
   <p class="search-status" aria-live="polite"><span data-visible-count>0</span> matching relationship(s)</p>
 </section>
-<div class="card-grid searchable-list"><article class="card relationship-card searchable" data-search-text="teampcp deadcatx3 pcpcat shadow-water-058 shellforce operates teampcp cloud stealer software   malware  explicit deterministic weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high teampcp teampcp cloud stealer this initial wave introduced the teampcp primary payload, called teampcp cloud stealer." data-target-type="software" data-confidence="explicit" data-source-ids="tar_source_840f177f8bc026ea670b58bf">
+<div class="card-grid actor-relationship-grid searchable-list"><article class="card relationship-card searchable" data-search-text="teampcp deadcatx3 pcpcat shadow-water-058 shellforce operates teampcp cloud stealer software   malware  explicit deterministic weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high teampcp teampcp cloud stealer this initial wave introduced the teampcp primary payload, called teampcp cloud stealer." data-target-type="software" data-confidence="explicit" data-source-ids="tar_source_840f177f8bc026ea670b58bf">
   <div class="card-topline">
     <div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div>
     <span class="count-pill">1 source(s)</span>
@@ -295,11 +577,12 @@
   <div class="relationship-source"><span>Source</span><strong>Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</strong><small>High reliability</small></div>
   <a class="card-link" href="../../relationships/tar_relationship_f71cf1928e4821708e39e52d/">View evidence →</a>
 </article></div>
+</div>
+</section>
   </main>
   <footer class="site-footer">
     <div class="shell footer-row">
       <span>Evidence-backed current-state relationships.</span>
-      <span><a href="../../data/manifest.json">Manifest</a> · <a href="../../site-manifest.json">Site manifest</a></span>
     </div>
   </footer>
 </body>

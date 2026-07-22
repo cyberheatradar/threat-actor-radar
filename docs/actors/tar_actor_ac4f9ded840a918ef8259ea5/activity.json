@@ -1,0 +1,146 @@
+{
+  "actor": {
+    "id": "tar_actor_ac4f9ded840a918ef8259ea5",
+    "name": "The Gentlemen"
+  },
+  "generation_method": "canonical-campaign-incident-projection-v1",
+  "records": [
+    {
+      "activity_date_basis": "explicit_source_month",
+      "activity_end": "2025-08-31T23:59:59Z",
+      "activity_start": "2025-08-01T00:00:00Z",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_precision": "month",
+      "description": "Trend Micro campaign reconstruction covering The Gentlemen activity investigated in August 2025. The source provides month-level timing rather than exact campaign start and end days.",
+      "detail_path": "campaigns/tar_activity_f229437da87e2df1482ac5a4/",
+      "evidence": [
+        {
+          "excerpt": "In August 2025, we investigated a new ransomware campaign orchestrated by The Gentlemen, an emerging and previously undocumented threat group.",
+          "role": "scope",
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "flow_path": "attack-flows/the-gentlemen/?scope=trend-august-campaign",
+      "id": "tar_activity_f229437da87e2df1482ac5a4",
+      "record_type": "campaign",
+      "relationship_ids": [],
+      "relationships": [],
+      "scope_status": "canonical_activity",
+      "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d",
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ],
+      "source_publication_date": "2025-09-09T00:00:00Z",
+      "source_publication_display": "2025-09-09",
+      "source_reliability": "high",
+      "source_url": "https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html",
+      "sources": [
+        {
+          "id": "tar_source_1c7de0cfeb2bfe740e1d6b9d",
+          "published_at": "2025-09-09T00:00:00Z",
+          "published_display": "2025-09-09",
+          "reliability": "high",
+          "title": "Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed",
+          "url": "https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html"
+        }
+      ],
+      "target_type_counts": {},
+      "title": "Trend Micro August 2025 campaign"
+    },
+    {
+      "activity_date_basis": "explicit_source_date",
+      "activity_end": "2026-04-10T23:59:59Z",
+      "activity_start": "2026-04-09T00:00:00Z",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_precision": "day",
+      "description": "Huntress-reported incident affecting a shipping and transportation organization. Visibility begins with an RDP session on April 9 and continues through ransomware redeployment and log clearing on April 10.",
+      "detail_path": "incidents/tar_activity_7bbe65a2893620e9116772dd/",
+      "evidence": [
+        {
+          "excerpt": "On April 10, the attacker also cleared the System , Application , and Security Windows Event Logs.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "excerpt": "The first point of visibility we had for the Windows Event Logs started on April 9 and showed the threat actor initiating a Remote Desktop Protocol (RDP) connection using a compromised user’s account.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "flow_path": "attack-flows/the-gentlemen/?scope=huntress-april-shipping",
+      "id": "tar_activity_7bbe65a2893620e9116772dd",
+      "record_type": "incident",
+      "relationship_ids": [],
+      "relationships": [],
+      "scope_status": "canonical_activity",
+      "source_id": "tar_source_f44fb5d6275a5774a4cacbe5",
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ],
+      "source_publication_date": "2026-05-21T07:00:00Z",
+      "source_publication_display": "2026-05-21",
+      "source_reliability": "high",
+      "source_url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps",
+      "sources": [
+        {
+          "id": "tar_source_f44fb5d6275a5774a4cacbe5",
+          "published_at": "2026-05-21T07:00:00Z",
+          "published_display": "2026-05-21",
+          "reliability": "high",
+          "title": "The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress",
+          "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+        }
+      ],
+      "target_type_counts": {},
+      "title": "April shipping and transportation incident"
+    },
+    {
+      "activity_date_basis": "explicit_source_date",
+      "activity_end": "2026-05-15T23:59:59Z",
+      "activity_start": "2026-04-22T00:00:00Z",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_precision": "day",
+      "description": "Huntress-reported incident affecting a construction company. Defender telemetry shows malicious activity from April 22 and explicit ransomware execution activity on May 15.",
+      "detail_path": "incidents/tar_activity_4de236cdb5a9f74187d0c14c/",
+      "evidence": [
+        {
+          "excerpt": "Microsoft Defender logs illustrated malicious activity being detected as far back as April 22.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "excerpt": "The file encryption had also started days earlier before the Huntress agent was installed, on May 15.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "flow_path": "attack-flows/the-gentlemen/?scope=huntress-may-construction",
+      "id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "record_type": "incident",
+      "relationship_ids": [],
+      "relationships": [],
+      "scope_status": "canonical_activity",
+      "source_id": "tar_source_f44fb5d6275a5774a4cacbe5",
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ],
+      "source_publication_date": "2026-05-21T07:00:00Z",
+      "source_publication_display": "2026-05-21",
+      "source_reliability": "high",
+      "source_url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps",
+      "sources": [
+        {
+          "id": "tar_source_f44fb5d6275a5774a4cacbe5",
+          "published_at": "2026-05-21T07:00:00Z",
+          "published_display": "2026-05-21",
+          "reliability": "high",
+          "title": "The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress",
+          "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+        }
+      ],
+      "target_type_counts": {},
+      "title": "May construction-company incident"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

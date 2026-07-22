@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_00d633b262aa62d112d43f82",
+    "name": "INC Ransom"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_00d633b262aa62d112d43f82",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_f7a696ce37bdf10975e7294b",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_f15b0161af94f467e4fbd09d"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_f15b0161af94f467e4fbd09d",
+          "target_id": "tar_software_39da1981900e08409890e476",
+          "target_name": "INC Ransomware",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_4f9bf446efc3b7e48c970586",
+      "source_ids": [
+        "tar_source_4f9bf446efc3b7e48c970586"
+      ],
+      "source_publication_date": "2026-03-16T00:00:00Z",
+      "source_publication_display": "2026-03-16",
+      "source_reliability": "high",
+      "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape",
+      "sources": [
+        {
+          "id": "tar_source_4f9bf446efc3b7e48c970586",
+          "published_at": "2026-03-16T00:00:00Z",
+          "published_display": "2026-03-16",
+          "reliability": "high",
+          "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1
+      },
+      "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

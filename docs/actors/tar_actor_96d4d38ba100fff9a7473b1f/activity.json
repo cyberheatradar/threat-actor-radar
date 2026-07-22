@@ -1,0 +1,786 @@
+{
+  "actor": {
+    "id": "tar_actor_96d4d38ba100fff9a7473b1f",
+    "name": "MirrorFace"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_96d4d38ba100fff9a7473b1f",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_19d105ffd678e30179a15b03",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_dc41404b841af6f334d6e39e",
+        "tar_relationship_53fb135c8f788f3c3f2bfcaf",
+        "tar_relationship_ea165fc30401722658671846",
+        "tar_relationship_4adb386c5be082b4a14d3560",
+        "tar_relationship_bdba09dd282b14a8bf1cf1cf",
+        "tar_relationship_3bb505f8e442327173be9c24",
+        "tar_relationship_821cd137cff3fc2da063efd6",
+        "tar_relationship_aeb186d1ab61a68f6e26fef7",
+        "tar_relationship_ff4d13f19c81f540371c87a9",
+        "tar_relationship_6047e173f4936d603c060832",
+        "tar_relationship_0743ff206b634791a1794b82",
+        "tar_relationship_81c9c4b35f98c56a27ab60d5",
+        "tar_relationship_bcca8395797c4eb59a154acb",
+        "tar_relationship_18907fe25c18a77824f858c8",
+        "tar_relationship_32134bc6f22641f8e9c4c557",
+        "tar_relationship_363f8ce11da45c9f435678c1",
+        "tar_relationship_1b5b7b00b919b55948086f59",
+        "tar_relationship_73b6e3ecbc583c0af098722e",
+        "tar_relationship_3b03c3af16ae7d4e0b31f6a2",
+        "tar_relationship_baa0c7a821cbbbe7cba5edd0"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "strongly_supported",
+          "predicate": "executes",
+          "relationship_id": "tar_relationship_dc41404b841af6f334d6e39e",
+          "target_id": "tar_command_62756e9e279b62a2a546e415",
+          "target_name": "cmd.exe /c del c:\\Windows\\system32\\UIAnimation.xml /f /q taskkill.exe",
+          "target_type": "command"
+        },
+        {
+          "attack_id": "",
+          "confidence": "strongly_supported",
+          "predicate": "executes",
+          "relationship_id": "tar_relationship_53fb135c8f788f3c3f2bfcaf",
+          "target_id": "tar_command_c591d40350cb1509653fd924",
+          "target_name": "cmd.exe /c dir c:\\ cmd.exe /c dir c:\\users\\ cmd.exe /c dir c:\\users\\ \\Desktop cmd.exe /c dir c:\\users\\ \\Documents cmd.e…",
+          "target_type": "command"
+        },
+        {
+          "attack_id": "T1087",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_ea165fc30401722658671846",
+          "target_id": "tar_technique_0471014e3f5bd97078be81b0",
+          "target_name": "Account Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1560.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_4adb386c5be082b4a14d3560",
+          "target_id": "tar_technique_60d9d46701f7168a284637e5",
+          "target_name": "Archive via Utility",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1134.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_bdba09dd282b14a8bf1cf1cf",
+          "target_id": "tar_technique_b2a3667bb7221987405d78cb",
+          "target_name": "Create Process with Token",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1039",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3bb505f8e442327173be9c24",
+          "target_id": "tar_technique_cc90048a4ff0f9e04fe9d394",
+          "target_name": "Data from Network Shared Drive",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1140",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_821cd137cff3fc2da063efd6",
+          "target_id": "tar_technique_585e5fcd5fa03a389ea0b16f",
+          "target_name": "Deobfuscate/Decode Files or Information",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1568.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_aeb186d1ab61a68f6e26fef7",
+          "target_id": "tar_technique_75eff54301663435c5600654",
+          "target_name": "Domain Generation Algorithms",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1133",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_ff4d13f19c81f540371c87a9",
+          "target_id": "tar_technique_636415ea6c22459e7080e3ae",
+          "target_name": "External Remote Services",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1083",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_6047e173f4936d603c060832",
+          "target_id": "tar_technique_fe8c6c5412db82bc5ac89792",
+          "target_name": "File and Directory Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1070.004",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_0743ff206b634791a1794b82",
+          "target_id": "tar_technique_ecb2982f9ed10110b5c730bc",
+          "target_name": "File Deletion",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1564",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_81c9c4b35f98c56a27ab60d5",
+          "target_id": "tar_technique_4da76a35926f44db569e860d",
+          "target_name": "Hide Artifacts",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1112",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_bcca8395797c4eb59a154acb",
+          "target_id": "tar_technique_dce340497ddb77a8c363be6d",
+          "target_name": "Modify Registry",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1127.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_18907fe25c18a77824f858c8",
+          "target_id": "tar_technique_faed2f38ba6abe1005644d59",
+          "target_name": "MSBuild",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1003",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_32134bc6f22641f8e9c4c557",
+          "target_id": "tar_technique_616c9abff687d2d46cf1e470",
+          "target_name": "OS Credential Dumping",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1055",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_363f8ce11da45c9f435678c1",
+          "target_id": "tar_technique_95afd3939a7dfef7ab50ed89",
+          "target_name": "Process Injection",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1053.005",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_1b5b7b00b919b55948086f59",
+          "target_id": "tar_technique_ef31c6be18c81b6c9d700c31",
+          "target_name": "Scheduled Task",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1021.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_73b6e3ecbc583c0af098722e",
+          "target_id": "tar_technique_04952af703bfd3a06a18fa1c",
+          "target_name": "SMB/Windows Admin Shares",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1070.006",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3b03c3af16ae7d4e0b31f6a2",
+          "target_id": "tar_technique_c56065d3ae133dd8b6928aaa",
+          "target_name": "Timestomp",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1543.003",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_baa0c7a821cbbbe7cba5edd0",
+          "target_id": "tar_technique_0178386a12dc09d7fe9f11c3",
+          "target_name": "Windows Service",
+          "target_type": "technique"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_c9628e01342b561ea25256f2",
+      "source_ids": [
+        "tar_source_c9628e01342b561ea25256f2"
+      ],
+      "source_publication_date": "",
+      "source_publication_display": "Date unavailable",
+      "source_reliability": "high",
+      "source_url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html",
+      "sources": [
+        {
+          "id": "tar_source_c9628e01342b561ea25256f2",
+          "published_at": "",
+          "published_display": "Date unavailable",
+          "reliability": "high",
+          "title": "MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes",
+          "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+        }
+      ],
+      "target_type_counts": {
+        "command": 2,
+        "technique": 18
+      },
+      "title": "MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes"
+    },
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_96d4d38ba100fff9a7473b1f",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_da5f064ec675d06a02fec8fd",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_38e6aabb1c8d578c14539372",
+        "tar_relationship_067b69f27d167a7f9da62b4c",
+        "tar_relationship_d8f4a2bde314b370b63edfc7",
+        "tar_relationship_b4ecf18784372c05dabb88ea",
+        "tar_relationship_24be70311e4c6dfd5148a054",
+        "tar_relationship_471c2010a729ceaa655c766e",
+        "tar_relationship_90970c2c976ae98013f90423",
+        "tar_relationship_821cd137cff3fc2da063efd6",
+        "tar_relationship_02168193c09152e5709562d1",
+        "tar_relationship_8b470df166a5604b0c78fe70",
+        "tar_relationship_aeb186d1ab61a68f6e26fef7",
+        "tar_relationship_c1f5b62535456a7dd84f9cbe",
+        "tar_relationship_0d38a85eb0bd4ab286ac07a7",
+        "tar_relationship_19bcd5d2105003675732e133",
+        "tar_relationship_4036e356391d20dcd73fc2aa",
+        "tar_relationship_78c7bc19ee6f45315f6d785e",
+        "tar_relationship_0743ff206b634791a1794b82",
+        "tar_relationship_20a9514fbc84bee0a8695b35",
+        "tar_relationship_e79eb66437e3226d8201e30e",
+        "tar_relationship_dfd3d6a6dafcdccfffcfd80f",
+        "tar_relationship_4453730f654ae31bdca4dcc9",
+        "tar_relationship_3e695b3031571a365c8e44e9",
+        "tar_relationship_3439316eb60967875b3ed711",
+        "tar_relationship_214978075809abee23c84df1",
+        "tar_relationship_6acd5a70de5c9d2dce8b7f94",
+        "tar_relationship_2ea74006d4edc3b75520b0fc",
+        "tar_relationship_94fbfd1a528621be8411387a",
+        "tar_relationship_bcca8395797c4eb59a154acb",
+        "tar_relationship_18907fe25c18a77824f858c8",
+        "tar_relationship_e77664537842982ac42560dd",
+        "tar_relationship_81e766874f6c0d62f0bc0982",
+        "tar_relationship_363f8ce11da45c9f435678c1",
+        "tar_relationship_008ad8ca8b062c9ff7fc7664",
+        "tar_relationship_2a9bf46769d6c8b5a5146f94",
+        "tar_relationship_f3388e844fc509e093af0b7b",
+        "tar_relationship_1b5b7b00b919b55948086f59",
+        "tar_relationship_83434778e2f41e535fa85760",
+        "tar_relationship_a2b56cc4142d819c3444bea7",
+        "tar_relationship_7169cd4bf98b290fddc67ff0",
+        "tar_relationship_08e9acb68b7e0157786d23cf",
+        "tar_relationship_9d529d42e08b8364fe1bdfbb",
+        "tar_relationship_af0a8854d27f77ade28efb35",
+        "tar_relationship_ba4553787b3793b055b87cd5",
+        "tar_relationship_b2cad479b4032dee7de281c8",
+        "tar_relationship_3b03c3af16ae7d4e0b31f6a2",
+        "tar_relationship_ea4d669a9e507e50ed0bf688",
+        "tar_relationship_3dcc9438c94f4d4c74a7b8d6",
+        "tar_relationship_f90ba910c5b7bbfbe92d9efc",
+        "tar_relationship_886a49d0cbfd568f2b1c3713",
+        "tar_relationship_715fef419bfe4dc9105e7221"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "unknown",
+          "relationship_id": "tar_relationship_38e6aabb1c8d578c14539372",
+          "target_id": "tar_software_e367c2d58e823c2f3817b6bf",
+          "target_name": "ANEL",
+          "target_type": "software"
+        },
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_067b69f27d167a7f9da62b4c",
+          "target_id": "tar_software_bc66e819a2f7b6e07083a240",
+          "target_name": "AsyncRAT",
+          "target_type": "software"
+        },
+        {
+          "attack_id": "T1115",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_d8f4a2bde314b370b63edfc7",
+          "target_id": "tar_technique_24d55c5cde265d2a0f38434a",
+          "target_name": "Clipboard Data",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1585.003",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_b4ecf18784372c05dabb88ea",
+          "target_id": "tar_technique_cab66946b82e88616d5af633",
+          "target_name": "Cloud Accounts",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1027.004",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_24be70311e4c6dfd5148a054",
+          "target_id": "tar_technique_fe48da6a9360c017579ffa7e",
+          "target_name": "Compile After Delivery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1030",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_471c2010a729ceaa655c766e",
+          "target_id": "tar_technique_16373708a9bdaa359a6afe84",
+          "target_name": "Data Transfer Size Limits",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1622",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_90970c2c976ae98013f90423",
+          "target_id": "tar_technique_a5bb1f31db354037d5d7bb34",
+          "target_name": "Debugger Evasion",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1140",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_821cd137cff3fc2da063efd6",
+          "target_id": "tar_technique_585e5fcd5fa03a389ea0b16f",
+          "target_name": "Deobfuscate/Decode Files or Information",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1574.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_02168193c09152e5709562d1",
+          "target_id": "tar_technique_e3efdcd3113e43b0522efc05",
+          "target_name": "DLL",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1087.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_8b470df166a5604b0c78fe70",
+          "target_id": "tar_technique_cf7c3cfb71d0ad89dd7dd8c8",
+          "target_name": "Domain Account",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1568.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_aeb186d1ab61a68f6e26fef7",
+          "target_id": "tar_technique_75eff54301663435c5600654",
+          "target_name": "Domain Generation Algorithms",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1036.007",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_c1f5b62535456a7dd84f9cbe",
+          "target_id": "tar_technique_3f72a1d5f9fd998fdaba70fe",
+          "target_name": "Double File Extension",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1027.007",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_0d38a85eb0bd4ab286ac07a7",
+          "target_id": "tar_technique_55305332feeef10fc6c63187",
+          "target_name": "Dynamic API Resolution",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1585.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_19bcd5d2105003675732e133",
+          "target_id": "tar_technique_8857d6e46cd1c2826967617b",
+          "target_name": "Email Accounts",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1573",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_4036e356391d20dcd73fc2aa",
+          "target_id": "tar_technique_0f78e0bf677bee4516179fe9",
+          "target_name": "Encrypted Channel",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1041",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_78c7bc19ee6f45315f6d785e",
+          "target_id": "tar_technique_69c3e657e0a54f321cf90f8a",
+          "target_name": "Exfiltration Over C2 Channel",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1070.004",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_0743ff206b634791a1794b82",
+          "target_id": "tar_technique_ecb2982f9ed10110b5c730bc",
+          "target_name": "File Deletion",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1027.011",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_20a9514fbc84bee0a8695b35",
+          "target_id": "tar_technique_c55861fd8ba068142f439551",
+          "target_name": "Fileless Storage",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1564.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_e79eb66437e3226d8201e30e",
+          "target_id": "tar_technique_057ae3b9b8748086a97caf87",
+          "target_name": "Hidden Files and Directories",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1564.003",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_dfd3d6a6dafcdccfffcfd80f",
+          "target_id": "tar_technique_f7b73f67b68800cc90b8e885",
+          "target_name": "Hidden Window",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_4453730f654ae31bdca4dcc9",
+          "target_id": "tar_software_44b9ee4f7ae4accdc09af4a0",
+          "target_name": "HiddenFace",
+          "target_type": "software"
+        },
+        {
+          "attack_id": "T1001.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3e695b3031571a365c8e44e9",
+          "target_id": "tar_technique_85ee08de90d0cb8384d5da14",
+          "target_name": "Junk Data",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3439316eb60967875b3ed711",
+          "target_id": "tar_software_e089c1e77397338f5bdbc55f",
+          "target_name": "LODEINFO",
+          "target_type": "software"
+        },
+        {
+          "attack_id": "T1204.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_214978075809abee23c84df1",
+          "target_id": "tar_technique_5f84c93a292f7755edbc9185",
+          "target_name": "Malicious File",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1204.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_6acd5a70de5c9d2dce8b7f94",
+          "target_id": "tar_technique_521bd4d4474b216befcbf18f",
+          "target_name": "Malicious Link",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1588.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_2ea74006d4edc3b75520b0fc",
+          "target_id": "tar_technique_4372287caf4cc4f9cc7d0b4f",
+          "target_name": "Malware",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1587.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_94fbfd1a528621be8411387a",
+          "target_id": "tar_technique_5c214bde74b585361bd6fdbd",
+          "target_name": "Malware",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1112",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_bcca8395797c4eb59a154acb",
+          "target_id": "tar_technique_dce340497ddb77a8c363be6d",
+          "target_name": "Modify Registry",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1127.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_18907fe25c18a77824f858c8",
+          "target_id": "tar_technique_faed2f38ba6abe1005644d59",
+          "target_name": "MSBuild",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_e77664537842982ac42560dd",
+          "target_id": "tar_technique_1708b593bba83581133f7c03",
+          "target_name": "PowerShell",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1057",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_81e766874f6c0d62f0bc0982",
+          "target_id": "tar_technique_fd38041a0285503dc798cdf7",
+          "target_name": "Process Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1055",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_363f8ce11da45c9f435678c1",
+          "target_id": "tar_technique_95afd3939a7dfef7ab50ed89",
+          "target_name": "Process Injection",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1012",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_008ad8ca8b062c9ff7fc7664",
+          "target_id": "tar_technique_0c21ab016d2323bf22f88107",
+          "target_name": "Query Registry",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1547.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_2a9bf46769d6c8b5a5146f94",
+          "target_id": "tar_technique_4c35083913c08e45361960a0",
+          "target_name": "Registry Run Keys / Startup Folder",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1564.006",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_f3388e844fc509e093af0b7b",
+          "target_id": "tar_technique_043a1fdfcbd33f67ef3cf37f",
+          "target_name": "Run Virtual Instance",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1053.005",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_1b5b7b00b919b55948086f59",
+          "target_id": "tar_technique_ef31c6be18c81b6c9d700c31",
+          "target_name": "Scheduled Task",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1113",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_83434778e2f41e535fa85760",
+          "target_id": "tar_technique_dc1a1c8aaa3f7a12ff8c70cb",
+          "target_name": "Screen Capture",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1566.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_a2b56cc4142d819c3444bea7",
+          "target_id": "tar_technique_c94ba51a681188074744251f",
+          "target_name": "Spearphishing Link",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1132.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_7169cd4bf98b290fddc67ff0",
+          "target_id": "tar_technique_7cfb40bcbca12c51e7036003",
+          "target_name": "Standard Encoding",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1218",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_08e9acb68b7e0157786d23cf",
+          "target_id": "tar_technique_4c1f741ba982912befbfe0e8",
+          "target_name": "System Binary Proxy Execution",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1082",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_9d529d42e08b8364fe1bdfbb",
+          "target_id": "tar_technique_64a93ae2ca383974e0cf0d64",
+          "target_name": "System Information Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1033",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_af0a8854d27f77ade28efb35",
+          "target_id": "tar_technique_cac7c64362f351213bea80a1",
+          "target_name": "System Owner/User Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1124",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_ba4553787b3793b055b87cd5",
+          "target_id": "tar_technique_07977f9406ac197640db6ad9",
+          "target_name": "System Time Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1221",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_b2cad479b4032dee7de281c8",
+          "target_id": "tar_technique_66ab89d3eecd75dfb51ad61a",
+          "target_name": "Template Injection",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1070.006",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3b03c3af16ae7d4e0b31f6a2",
+          "target_id": "tar_technique_c56065d3ae133dd8b6928aaa",
+          "target_name": "Timestomp",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1588.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_ea4d669a9e507e50ed0bf688",
+          "target_id": "tar_technique_1c1f9532c5b2520f1b342ff1",
+          "target_name": "Tool",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1071.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3dcc9438c94f4d4c74a7b8d6",
+          "target_id": "tar_technique_13ec3b31da3e53ce87c92952",
+          "target_name": "Web Protocols",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059.003",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_f90ba910c5b7bbfbe92d9efc",
+          "target_id": "tar_technique_6a4df466dad613ce40ad30ef",
+          "target_name": "Windows Command Shell",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1047",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_886a49d0cbfd568f2b1c3713",
+          "target_id": "tar_technique_a5053bae89cd8bbf96ce330e",
+          "target_name": "Windows Management Instrumentation",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_715fef419bfe4dc9105e7221",
+          "target_id": "tar_software_750b046eb63892be61641325",
+          "target_name": "Windows Sandbox",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_a1d5ddb3c5f5e7972baf47dd",
+      "source_ids": [
+        "tar_source_a1d5ddb3c5f5e7972baf47dd"
+      ],
+      "source_publication_date": "",
+      "source_publication_display": "Date unavailable",
+      "source_reliability": "high",
+      "source_url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor",
+      "sources": [
+        {
+          "id": "tar_source_a1d5ddb3c5f5e7972baf47dd",
+          "published_at": "",
+          "published_display": "Date unavailable",
+          "reliability": "high",
+          "title": "Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor",
+          "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor"
+        }
+      ],
+      "target_type_counts": {
+        "software": 5,
+        "technique": 45
+      },
+      "title": "Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

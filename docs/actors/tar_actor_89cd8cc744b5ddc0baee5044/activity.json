@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_89cd8cc744b5ddc0baee5044",
+    "name": "menuPass"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_89cd8cc744b5ddc0baee5044",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_db5219b859129af5649199c1",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_35316b1942a647884ce69deb"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "unknown",
+          "relationship_id": "tar_relationship_35316b1942a647884ce69deb",
+          "target_id": "tar_software_e367c2d58e823c2f3817b6bf",
+          "target_name": "ANEL",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_a1d5ddb3c5f5e7972baf47dd",
+      "source_ids": [
+        "tar_source_a1d5ddb3c5f5e7972baf47dd"
+      ],
+      "source_publication_date": "",
+      "source_publication_display": "Date unavailable",
+      "source_reliability": "high",
+      "source_url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor",
+      "sources": [
+        {
+          "id": "tar_source_a1d5ddb3c5f5e7972baf47dd",
+          "published_at": "",
+          "published_display": "Date unavailable",
+          "reliability": "high",
+          "title": "Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor",
+          "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1
+      },
+      "title": "Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_4ae86ad3c963b2c803e12f46",
+    "name": "FIN6"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_4ae86ad3c963b2c803e12f46",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_830d13ac6764be7058c61a6e",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_aaf65427689ca2b915f9e3a8"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_aaf65427689ca2b915f9e3a8",
+          "target_id": "tar_software_10fbc0a415b8fa985b89d6bd",
+          "target_name": "netsh",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_4f9bf446efc3b7e48c970586",
+      "source_ids": [
+        "tar_source_4f9bf446efc3b7e48c970586"
+      ],
+      "source_publication_date": "2026-03-16T00:00:00Z",
+      "source_publication_display": "2026-03-16",
+      "source_reliability": "high",
+      "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape",
+      "sources": [
+        {
+          "id": "tar_source_4f9bf446efc3b7e48c970586",
+          "published_at": "2026-03-16T00:00:00Z",
+          "published_display": "2026-03-16",
+          "reliability": "high",
+          "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1
+      },
+      "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

@@ -1,0 +1,335 @@
+{
+  "actor": {
+    "id": "tar_actor_49ddcf6ca5281ad34be31a13",
+    "name": "TeamPCP"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_49ddcf6ca5281ad34be31a13",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_613b556648d0eca6cd86293a",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_22333b2fd4d7b2051b6b1a3e",
+        "tar_relationship_d97fc20bc8a148e1be5f896a",
+        "tar_relationship_698c5cca57d465628722a74a",
+        "tar_relationship_2e4d49f4ad57c145cb53deed"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "operates",
+          "relationship_id": "tar_relationship_22333b2fd4d7b2051b6b1a3e",
+          "target_id": "tar_software_bb63c04088651b344b5dd65e",
+          "target_name": "TeamPCP cloud stealer",
+          "target_type": "software"
+        },
+        {
+          "attack_id": "T1021.007",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_d97fc20bc8a148e1be5f896a",
+          "target_id": "tar_technique_e33f18e43f694422847c001f",
+          "target_name": "Cloud Services",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_698c5cca57d465628722a74a",
+          "target_id": "tar_technique_f19cca6de1e22085c36b8d72",
+          "target_name": "Command and Scripting Interpreter",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1074",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_2e4d49f4ad57c145cb53deed",
+          "target_id": "tar_technique_3f966cb338fee8f7f1d86e5b",
+          "target_name": "Data Staged",
+          "target_type": "technique"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_840f177f8bc026ea670b58bf",
+      "source_ids": [
+        "tar_source_840f177f8bc026ea670b58bf"
+      ],
+      "source_publication_date": "2026-03-31T21:00:39Z",
+      "source_publication_display": "2026-03-31",
+      "source_reliability": "high",
+      "source_url": "https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks",
+      "sources": [
+        {
+          "id": "tar_source_840f177f8bc026ea670b58bf",
+          "published_at": "2026-03-31T21:00:39Z",
+          "published_display": "2026-03-31",
+          "reliability": "high",
+          "title": "Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure",
+          "url": "https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1,
+        "technique": 3
+      },
+      "title": "Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure"
+    },
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_49ddcf6ca5281ad34be31a13",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_4760a2f618216bb76308db82",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_1aae49094aab0ec833d8c882",
+        "tar_relationship_26064c259c9deb1222012e99",
+        "tar_relationship_ebeaa0b96002e4db7fb3c60e",
+        "tar_relationship_97e26887caa2370f51c08eca",
+        "tar_relationship_47a582d48196d89d5654a8b7",
+        "tar_relationship_2dc517cee684366a7c079ecd",
+        "tar_relationship_781c16900243e07089c994a1",
+        "tar_relationship_f4b6cc96365d4ce0159362eb",
+        "tar_relationship_4d840ca3ef396b9d28aa5834",
+        "tar_relationship_9b93d599089fda75709424a5",
+        "tar_relationship_a7fee0420629e693ec69f54b",
+        "tar_relationship_e98e5bd73a5bdd14981551c0",
+        "tar_relationship_cf99d41179f09fe61914b6bf",
+        "tar_relationship_970602e7a3e9686fc2f5f7f0",
+        "tar_relationship_3da5ea68eb8ee5c64a911377",
+        "tar_relationship_428eab455a30df7367fdbd7c",
+        "tar_relationship_0c4224dfec7caa3221695a65",
+        "tar_relationship_fc4bbea8b4d8d3e364a1569d",
+        "tar_relationship_7d1a88ed32e64b4153eb8642",
+        "tar_relationship_81dccdd2dce84997fa1fb9fa",
+        "tar_relationship_f71cf1928e4821708e39e52d"
+      ],
+      "relationships": [
+        {
+          "attack_id": "T1547",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_1aae49094aab0ec833d8c882",
+          "target_id": "tar_technique_3ccf99cc4749fbab768ccdea",
+          "target_name": "Boot or Logon Autostart Execution",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1552.005",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_26064c259c9deb1222012e99",
+          "target_id": "tar_technique_e6b555ab4ac66ae7568cfe61",
+          "target_name": "Cloud Instance Metadata API",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1526",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_ebeaa0b96002e4db7fb3c60e",
+          "target_id": "tar_technique_a10ebf1477c1b4571a567fd4",
+          "target_name": "Cloud Service Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1195.002",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_97e26887caa2370f51c08eca",
+          "target_id": "tar_technique_94a8d71a5114bfef6ff9b4fd",
+          "target_name": "Compromise Software Supply Chain",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1613",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_47a582d48196d89d5654a8b7",
+          "target_id": "tar_technique_bf7de05c80b68294d11a3572",
+          "target_name": "Container and Resource Discovery",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1552.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_2dc517cee684366a7c079ecd",
+          "target_id": "tar_technique_4b1c364b178dd2cbd85d3fad",
+          "target_name": "Credentials In Files",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1530",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_781c16900243e07089c994a1",
+          "target_id": "tar_technique_00d94cbaa73997e3ed25659b",
+          "target_name": "Data from Cloud Storage",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1005",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_f4b6cc96365d4ce0159362eb",
+          "target_id": "tar_technique_251e0a43bb990eecf3ffe474",
+          "target_name": "Data from Local System",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1102.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_4d840ca3ef396b9d28aa5834",
+          "target_id": "tar_technique_d9a937e1006a97810bb3e4a5",
+          "target_name": "Dead Drop Resolver",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1041",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_9b93d599089fda75709424a5",
+          "target_id": "tar_technique_69c3e657e0a54f321cf90f8a",
+          "target_name": "Exfiltration Over C2 Channel",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1567",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_a7fee0420629e693ec69f54b",
+          "target_id": "tar_technique_b84b5250bf7113f20da08376",
+          "target_name": "Exfiltration Over Web Service",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1070.004",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_e98e5bd73a5bdd14981551c0",
+          "target_id": "tar_technique_ecb2982f9ed10110b5c730bc",
+          "target_name": "File Deletion",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1657",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_cf99d41179f09fe61914b6bf",
+          "target_id": "tar_technique_fcfbfd6866dc98e0a8797e35",
+          "target_name": "Financial Theft",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059.007",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_970602e7a3e9686fc2f5f7f0",
+          "target_id": "tar_technique_4290e2914d7528a58e8f1abe",
+          "target_name": "JavaScript",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1027",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_3da5ea68eb8ee5c64a911377",
+          "target_id": "tar_technique_17a42df35f19540435f3c4c2",
+          "target_name": "Obfuscated Files or Information",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059.006",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_428eab455a30df7367fdbd7c",
+          "target_id": "tar_technique_8f59d1e1d83365a9c85d2ac4",
+          "target_name": "Python",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1528",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_0c4224dfec7caa3221695a65",
+          "target_id": "tar_technique_6494c5f3c650374c352ffaa6",
+          "target_name": "Steal Application Access Token",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1199",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_fc4bbea8b4d8d3e364a1569d",
+          "target_id": "tar_technique_a1f79eeaad6a6f78a10468db",
+          "target_name": "Trusted Relationship",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1059.004",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_7d1a88ed32e64b4153eb8642",
+          "target_id": "tar_technique_2744be5dbccf6d8c81ef43a0",
+          "target_name": "Unix Shell",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1078",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_81dccdd2dce84997fa1fb9fa",
+          "target_id": "tar_technique_e8ff6a8bb84edda989cd6fe7",
+          "target_name": "Valid Accounts",
+          "target_type": "technique"
+        },
+        {
+          "attack_id": "T1071.001",
+          "confidence": "strongly_supported",
+          "predicate": "uses",
+          "relationship_id": "tar_relationship_f71cf1928e4821708e39e52d",
+          "target_id": "tar_technique_13ec3b31da3e53ce87c92952",
+          "target_name": "Web Protocols",
+          "target_type": "technique"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_71967503afd8c6ca264cc5ff",
+      "source_ids": [
+        "tar_source_71967503afd8c6ca264cc5ff"
+      ],
+      "source_publication_date": "2026-05-13T00:00:00Z",
+      "source_publication_display": "2026-05-13",
+      "source_reliability": "high",
+      "source_url": "https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html",
+      "sources": [
+        {
+          "id": "tar_source_71967503afd8c6ca264cc5ff",
+          "published_at": "2026-05-13T00:00:00Z",
+          "published_display": "2026-05-13",
+          "reliability": "high",
+          "title": "Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft",
+          "url": "https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html"
+        }
+      ],
+      "target_type_counts": {
+        "technique": 21
+      },
+      "title": "Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

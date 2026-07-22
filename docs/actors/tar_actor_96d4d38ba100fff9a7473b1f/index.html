@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ThreatActorRadar profile for MirrorFace">
   <title>MirrorFace · ThreatActorRadar</title>
-  <link rel="stylesheet" href="../../assets/app.css?v=v0.12.2-dev">
-  <script defer src="../../assets/app.js?v=v0.12.2-dev"></script>
+  <link rel="stylesheet" href="../../assets/app.css?v=v0.14.7">
+  <script defer src="../../assets/app.js?v=v0.14.7"></script>
 </head>
 <body data-page="actor-detail">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,15 +14,699 @@
     <div class="shell header-row">
       <div class="brand-cluster">
         <a class="brand" href="../../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
-        <div class="build-meta" aria-label="Build version"><strong>v0.12.2-dev</strong></div>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.7</strong></div>
       </div>
-      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/" aria-current="page" class="active">Actors</a><a href="../../relationships/">Relationships</a><a href="../../sources/">Sources</a></nav>
+      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/" aria-current="page" class="active">Actors</a><a href="../../activities/">Activities</a><a href="../../relationships/">Relationships</a><a href="../../attack-flows/">Attack Flows</a><a href="../../sources/">Sources</a></nav>
     </div>
   </header>
   <main id="main" class="shell">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Actors</a><span aria-hidden="true">/</span><span>MirrorFace</span></nav>
 <section class="page-title detail-title"><p class="eyebrow">Threat Actor Group</p><h1>MirrorFace</h1><div><span class="badge">Cyberespionage</span><span class="badge">Intrusion Set</span></div></section>
-<section class="detail-grid"><article class="panel"><h2>Aliases</h2><ul><li>Earth Kasha</li></ul></article><article class="panel"><h2>Coverage</h2><dl><dt>Relationships</dt><dd><strong>62</strong></dd><dt>ATT&amp;CK techniques</dt><dd><strong>55</strong></dd></dl></article></section>
+
+<section class="detail-grid actor-overview"><article class="panel"><h2>Aliases</h2><ul><li>Earth Kasha</li></ul></article><article class="panel"><h2>Coverage</h2><dl><dt>Relationships</dt><dd><strong>62</strong></dd><dt>Sources</dt><dd><strong>2</strong></dd><dt>ATT&amp;CK techniques</dt><dd><strong>55</strong></dd><dt>Software</dt><dd><strong>5</strong></dd><dt>Commands</dt><dd><strong>2</strong></dd><dt>First source publication</dt><dd>Unavailable</dd><dt>Latest source publication</dt><dd>Unavailable</dd><dt>Confidence</dt><dd>Explicit 5, Strongly Supported 57</dd></dl></article></section>
+<nav class="actor-tabs" role="tablist" aria-label="Actor intelligence views" data-actor-tabs>
+  <button id="actor-tab-activity" class="actor-tab active" type="button" role="tab" aria-selected="true" aria-controls="actor-panel-activity" data-actor-tab="activity">Activity history</button>
+  <button id="actor-tab-evidence" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-evidence" data-actor-tab="evidence">Evidence chronology</button>
+  <button id="actor-tab-techniques" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-techniques" data-actor-tab="techniques">Techniques</button>
+  <button id="actor-tab-relationships" class="actor-tab" type="button" role="tab" aria-selected="false" aria-controls="actor-panel-relationships" data-actor-tab="relationships">Relationships</button>
+</nav>
+<section id="actor-panel-activity" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-activity" data-actor-tab-panel="activity">
+<section class="activity-section" data-actor-activity-root>
+  <div class="section-head"><div><p class="eyebrow">Activity history</p><h2>Actor activity timeline</h2></div><p>2 report-level milestone(s)</p></div>
+  <p class="timeline-note">Milestones are ordered only by source publication date. They do not claim the activity happened on that date. Campaign or incident boundaries and activity dates are added only when deterministic extraction establishes them.</p>
+  <div class="activity-path-viewport" tabindex="0" aria-label="Actor activity timeline"><div class="activity-path"><a class="activity-milestone" href="#tar_activity_19d105ffd678e30179a15b03" data-activity-milestone>
+  <span class="activity-milestone-date">Date unavailable</span>
+  <strong>MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</strong>
+  <small>20 relationship(s) · report-level milestone</small>
+  <span class="activity-chip-row"><span class="activity-chip">executes cmd.exe /c del c:\Windows\system32\UIAnimation.xml /f /q taskkill.exe</span><span class="activity-chip">executes cmd.exe /c dir c:\ cmd.exe /c dir c:\users\ cmd.exe /c dir c:\users\ \Desktop cmd.exe /c dir c:\users\ \Documents cmd.e…</span><span class="activity-chip">T1087 · uses Account Discovery</span><span class="activity-chip muted">+17 more</span></span>
+</a><span class="activity-arrow" aria-hidden="true">→</span><a class="activity-milestone" href="#tar_activity_da5f064ec675d06a02fec8fd" data-activity-milestone>
+  <span class="activity-milestone-date">Date unavailable</span>
+  <strong>Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</strong>
+  <small>50 relationship(s) · report-level milestone</small>
+  <span class="activity-chip-row"><span class="activity-chip">unknown ANEL</span><span class="activity-chip">uses AsyncRAT</span><span class="activity-chip">T1115 · uses Clipboard Data</span><span class="activity-chip muted">+47 more</span></span>
+</a></div></div>
+  <div class="activity-records"><article class="activity-record" id="tar_activity_19d105ffd678e30179a15b03" data-activity-record data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="activity-record-head"><div><p class="eyebrow">Source-backed activity report</p><h3>MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</h3></div><div class="activity-record-date"><strong>Date unavailable</strong><small>Source published</small></div></div>
+
+  <p class="activity-record-summary">20 canonical Relationship reference(s) · Command 2, Technique 18. Evidence remains owned by canonical Relationship or Activity EvidenceSpan records and is not duplicated into the timeline.</p>
+  <ul class="activity-relationship-list"><li><a href="../../relationships/tar_relationship_dc41404b841af6f334d6e39e/">executes cmd.exe /c del c:\Windows\system32\UIAnimation.xml /f /q taskkill.exe</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_53fb135c8f788f3c3f2bfcaf/">executes cmd.exe /c dir c:\ cmd.exe /c dir c:\users\ cmd.exe /c dir c:\users\ \Desktop cmd.exe /c dir c:\users\ \Documents cmd.e…</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_ea165fc30401722658671846/">T1087 · uses Account Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_4adb386c5be082b4a14d3560/">T1560.001 · uses Archive via Utility</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_bdba09dd282b14a8bf1cf1cf/">T1134.002 · uses Create Process with Token</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3bb505f8e442327173be9c24/">T1039 · uses Data from Network Shared Drive</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_821cd137cff3fc2da063efd6/">T1140 · uses Deobfuscate/Decode Files or Information</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_aeb186d1ab61a68f6e26fef7/">T1568.002 · uses Domain Generation Algorithms</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_ff4d13f19c81f540371c87a9/">T1133 · uses External Remote Services</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_6047e173f4936d603c060832/">T1083 · uses File and Directory Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_0743ff206b634791a1794b82/">T1070.004 · uses File Deletion</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_81c9c4b35f98c56a27ab60d5/">T1564 · uses Hide Artifacts</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_bcca8395797c4eb59a154acb/">T1112 · uses Modify Registry</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_18907fe25c18a77824f858c8/">T1127.001 · uses MSBuild</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_32134bc6f22641f8e9c4c557/">T1003 · uses OS Credential Dumping</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_363f8ce11da45c9f435678c1/">T1055 · uses Process Injection</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_1b5b7b00b919b55948086f59/">T1053.005 · uses Scheduled Task</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_73b6e3ecbc583c0af098722e/">T1021.002 · uses SMB/Windows Admin Shares</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3b03c3af16ae7d4e0b31f6a2/">T1070.006 · uses Timestomp</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_baa0c7a821cbbbe7cba5edd0/">T1543.003 · uses Windows Service</a> <span class="badge confidence">Strongly Supported</span></li></ul>
+  <div class="timeline-links"><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+</article><article class="activity-record" id="tar_activity_da5f064ec675d06a02fec8fd" data-activity-record data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="activity-record-head"><div><p class="eyebrow">Source-backed activity report</p><h3>Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</h3></div><div class="activity-record-date"><strong>Date unavailable</strong><small>Source published</small></div></div>
+
+  <p class="activity-record-summary">50 canonical Relationship reference(s) · Software 5, Technique 45. Evidence remains owned by canonical Relationship or Activity EvidenceSpan records and is not duplicated into the timeline.</p>
+  <ul class="activity-relationship-list"><li><a href="../../relationships/tar_relationship_38e6aabb1c8d578c14539372/">unknown ANEL</a> <span class="badge confidence">Explicit</span></li><li><a href="../../relationships/tar_relationship_067b69f27d167a7f9da62b4c/">uses AsyncRAT</a> <span class="badge confidence">Explicit</span></li><li><a href="../../relationships/tar_relationship_d8f4a2bde314b370b63edfc7/">T1115 · uses Clipboard Data</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_b4ecf18784372c05dabb88ea/">T1585.003 · uses Cloud Accounts</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_24be70311e4c6dfd5148a054/">T1027.004 · uses Compile After Delivery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_471c2010a729ceaa655c766e/">T1030 · uses Data Transfer Size Limits</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_90970c2c976ae98013f90423/">T1622 · uses Debugger Evasion</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_821cd137cff3fc2da063efd6/">T1140 · uses Deobfuscate/Decode Files or Information</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_02168193c09152e5709562d1/">T1574.001 · uses DLL</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_8b470df166a5604b0c78fe70/">T1087.002 · uses Domain Account</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_aeb186d1ab61a68f6e26fef7/">T1568.002 · uses Domain Generation Algorithms</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_c1f5b62535456a7dd84f9cbe/">T1036.007 · uses Double File Extension</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_0d38a85eb0bd4ab286ac07a7/">T1027.007 · uses Dynamic API Resolution</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_19bcd5d2105003675732e133/">T1585.002 · uses Email Accounts</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_4036e356391d20dcd73fc2aa/">T1573 · uses Encrypted Channel</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_78c7bc19ee6f45315f6d785e/">T1041 · uses Exfiltration Over C2 Channel</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_0743ff206b634791a1794b82/">T1070.004 · uses File Deletion</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_20a9514fbc84bee0a8695b35/">T1027.011 · uses Fileless Storage</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_e79eb66437e3226d8201e30e/">T1564.001 · uses Hidden Files and Directories</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_dfd3d6a6dafcdccfffcfd80f/">T1564.003 · uses Hidden Window</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_4453730f654ae31bdca4dcc9/">uses HiddenFace</a> <span class="badge confidence">Explicit</span></li><li><a href="../../relationships/tar_relationship_3e695b3031571a365c8e44e9/">T1001.001 · uses Junk Data</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3439316eb60967875b3ed711/">uses LODEINFO</a> <span class="badge confidence">Explicit</span></li><li><a href="../../relationships/tar_relationship_214978075809abee23c84df1/">T1204.002 · uses Malicious File</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_6acd5a70de5c9d2dce8b7f94/">T1204.001 · uses Malicious Link</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_2ea74006d4edc3b75520b0fc/">T1588.001 · uses Malware</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_94fbfd1a528621be8411387a/">T1587.001 · uses Malware</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_bcca8395797c4eb59a154acb/">T1112 · uses Modify Registry</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_18907fe25c18a77824f858c8/">T1127.001 · uses MSBuild</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_e77664537842982ac42560dd/">T1059.001 · uses PowerShell</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_81e766874f6c0d62f0bc0982/">T1057 · uses Process Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_363f8ce11da45c9f435678c1/">T1055 · uses Process Injection</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_008ad8ca8b062c9ff7fc7664/">T1012 · uses Query Registry</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_2a9bf46769d6c8b5a5146f94/">T1547.001 · uses Registry Run Keys / Startup Folder</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_f3388e844fc509e093af0b7b/">T1564.006 · uses Run Virtual Instance</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_1b5b7b00b919b55948086f59/">T1053.005 · uses Scheduled Task</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_83434778e2f41e535fa85760/">T1113 · uses Screen Capture</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_a2b56cc4142d819c3444bea7/">T1566.002 · uses Spearphishing Link</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_7169cd4bf98b290fddc67ff0/">T1132.001 · uses Standard Encoding</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_08e9acb68b7e0157786d23cf/">T1218 · uses System Binary Proxy Execution</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_9d529d42e08b8364fe1bdfbb/">T1082 · uses System Information Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_af0a8854d27f77ade28efb35/">T1033 · uses System Owner/User Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_ba4553787b3793b055b87cd5/">T1124 · uses System Time Discovery</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_b2cad479b4032dee7de281c8/">T1221 · uses Template Injection</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3b03c3af16ae7d4e0b31f6a2/">T1070.006 · uses Timestomp</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_ea4d669a9e507e50ed0bf688/">T1588.002 · uses Tool</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_3dcc9438c94f4d4c74a7b8d6/">T1071.001 · uses Web Protocols</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_f90ba910c5b7bbfbe92d9efc/">T1059.003 · uses Windows Command Shell</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_886a49d0cbfd568f2b1c3713/">T1047 · uses Windows Management Instrumentation</a> <span class="badge confidence">Strongly Supported</span></li><li><a href="../../relationships/tar_relationship_715fef419bfe4dc9105e7221/">uses Windows Sandbox</a> <span class="badge confidence">Explicit</span></li></ul>
+  <div class="timeline-links"><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+</article></div>
+</section>
+</section>
+<section id="actor-panel-evidence" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-evidence" data-actor-tab-panel="evidence" hidden>
+<section class="timeline-section" data-timeline-root>
+  <div class="section-head"><div><p class="eyebrow">Evidence chronology</p><h2>Relationship evidence events</h2></div><p>70 source-backed event(s)</p></div>
+  <p class="timeline-note">Dates are source publication dates only. Missing dates are not inferred; each event remains linked to its canonical Relationship and source.</p>
+  <section class="timeline-filters" data-timeline-filters>
+  <div class="filter-field filter-search"><label for="timeline-search">Search</label><input id="timeline-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-timeline-search></div>
+  <div class="filter-field"><label for="timeline-type">Type</label><select id="timeline-type" data-timeline-target-type><option value="">All types</option><option value="command">Command</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
+  <div class="filter-field"><label for="timeline-confidence">Confidence</label><select id="timeline-confidence" data-timeline-confidence><option value="">All confidence</option><option value="explicit">Explicit</option><option value="strongly_supported">Strongly Supported</option></select></div>
+  <div class="filter-field"><label for="timeline-source">Source</label><select id="timeline-source" data-timeline-source><option value="">All sources</option><option value="tar_source_c9628e01342b561ea25256f2">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</option><option value="tar_source_a1d5ddb3c5f5e7972baf47dd">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</option></select></div>
+  <div class="filter-field"><label for="timeline-order">Order</label><select id="timeline-order" data-timeline-order><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
+  <button class="button secondary filter-reset" type="button" data-timeline-reset>Clear</button>
+  <p class="search-status" aria-live="polite"><span data-timeline-visible-count>0</span> matching event(s)</p>
+</section>
+  <div class="timeline-list" data-timeline-list><article class="timeline-event" id="evidence-e84f456152d2e1a426307ec6" data-timeline-item data-event-id="e84f456152d2e1a426307ec6" data-event-date="" data-search-text="mirrorface uses account discovery technique t1087 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1087</span></div>
+    <h3>uses Account Discovery</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_ea165fc30401722658671846/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-087e52ef38ad3854aa77ee54" data-timeline-item data-event-id="087e52ef38ad3854aa77ee54" data-event-date="" data-search-text="mirrorface uses archive via utility technique t1560.001 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1560.001</span></div>
+    <h3>uses Archive via Utility</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_4adb386c5be082b4a14d3560/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-22f903e18218b0ab11a4e992" data-timeline-item data-event-id="22f903e18218b0ab11a4e992" data-event-date="" data-search-text="mirrorface executes cmd.exe /c del c:\windows\system32\uianimation.xml /f /q taskkill.exe command  strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high after completing the series of reconnaissance activities, the attackers deleted the malware and stopped its own processes. this is supposed to be conducted for a purpose of covering up the traces to allow long-term persistence." data-target-type="command" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Command</span> <span class="badge confidence">Strongly Supported</span></div></div>
+    <h3>executes cmd.exe /c del c:\Windows\system32\UIAnimation.xml /f /q taskkill.exe</h3>
+    <p class="excerpt">After completing the series of reconnaissance activities, the attackers deleted the malware and stopped its own processes. This is supposed to be conducted for a purpose of covering up the traces to allow long-term persistence.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_dc41404b841af6f334d6e39e/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-617a3b7b7cf01354f700c37f" data-timeline-item data-event-id="617a3b7b7cf01354f700c37f" data-event-date="" data-search-text="mirrorface executes cmd.exe /c dir c:\ cmd.exe /c dir c:\users\ cmd.exe /c dir c:\users\ \desktop cmd.exe /c dir c:\users\ \documents cmd.e… command  strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high earth kasha" data-target-type="command" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Command</span> <span class="badge confidence">Strongly Supported</span></div></div>
+    <h3>executes cmd.exe /c dir c:\ cmd.exe /c dir c:\users\ cmd.exe /c dir c:\users\ \Desktop cmd.exe /c dir c:\users\ \Documents cmd.e…</h3>
+    <p class="excerpt">Earth Kasha</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_53fb135c8f788f3c3f2bfcaf/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-9f3d7572a5236fa07f0a40ad" data-timeline-item data-event-id="9f3d7572a5236fa07f0a40ad" data-event-date="" data-search-text="mirrorface uses create process with token technique t1134.002 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1134.002</span></div>
+    <h3>uses Create Process with Token</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_bdba09dd282b14a8bf1cf1cf/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-504e066affa6fef13e0c0eed" data-timeline-item data-event-id="504e066affa6fef13e0c0eed" data-event-date="" data-search-text="mirrorface uses data from network shared drive technique t1039 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1039</span></div>
+    <h3>uses Data from Network Shared Drive</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3bb505f8e442327173be9c24/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-78e840fcaa2a88311a7f153a" data-timeline-item data-event-id="78e840fcaa2a88311a7f153a" data-event-date="" data-search-text="mirrorface uses deobfuscate/decode files or information technique t1140 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1140</span></div>
+    <h3>uses Deobfuscate/Decode Files or Information</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_821cd137cff3fc2da063efd6/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-2ac101feb487de276118b71b" data-timeline-item data-event-id="2ac101feb487de276118b71b" data-event-date="" data-search-text="mirrorface uses domain generation algorithms technique t1568.002 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1568.002</span></div>
+    <h3>uses Domain Generation Algorithms</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_aeb186d1ab61a68f6e26fef7/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-ba3f5bbb449dd16a6df43f66" data-timeline-item data-event-id="ba3f5bbb449dd16a6df43f66" data-event-date="" data-search-text="mirrorface uses external remote services technique t1133 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1133</span></div>
+    <h3>uses External Remote Services</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_ff4d13f19c81f540371c87a9/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-f1335295a5aba6c54c0ea3bf" data-timeline-item data-event-id="f1335295a5aba6c54c0ea3bf" data-event-date="" data-search-text="mirrorface uses file and directory discovery technique t1083 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1083</span></div>
+    <h3>uses File and Directory Discovery</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_6047e173f4936d603c060832/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-309ac9221821726eb1fe5c1e" data-timeline-item data-event-id="309ac9221821726eb1fe5c1e" data-event-date="" data-search-text="mirrorface uses file deletion technique t1070.004 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1070.004</span></div>
+    <h3>uses File Deletion</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_0743ff206b634791a1794b82/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c3c425e5c0025afa894481b9" data-timeline-item data-event-id="c3c425e5c0025afa894481b9" data-event-date="" data-search-text="mirrorface uses hide artifacts technique t1564 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1564</span></div>
+    <h3>uses Hide Artifacts</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_81c9c4b35f98c56a27ab60d5/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-8cb2d3e81fd82991cd303791" data-timeline-item data-event-id="8cb2d3e81fd82991cd303791" data-event-date="" data-search-text="mirrorface uses modify registry technique t1112 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1112</span></div>
+    <h3>uses Modify Registry</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_bcca8395797c4eb59a154acb/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7b23f101a6a77d82f956a38f" data-timeline-item data-event-id="7b23f101a6a77d82f956a38f" data-event-date="" data-search-text="mirrorface uses msbuild technique t1127.001 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1127.001</span></div>
+    <h3>uses MSBuild</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_18907fe25c18a77824f858c8/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-b80e97007e3f6f9a4f29a763" data-timeline-item data-event-id="b80e97007e3f6f9a4f29a763" data-event-date="" data-search-text="mirrorface uses os credential dumping technique t1003 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1003</span></div>
+    <h3>uses OS Credential Dumping</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_32134bc6f22641f8e9c4c557/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-145c7f02e1165aeaadc7ff18" data-timeline-item data-event-id="145c7f02e1165aeaadc7ff18" data-event-date="" data-search-text="mirrorface uses process injection technique t1055 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1055</span></div>
+    <h3>uses Process Injection</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_363f8ce11da45c9f435678c1/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4c01b296228f2b834395383f" data-timeline-item data-event-id="4c01b296228f2b834395383f" data-event-date="" data-search-text="mirrorface uses scheduled task technique t1053.005 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1053.005</span></div>
+    <h3>uses Scheduled Task</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_1b5b7b00b919b55948086f59/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-37469a1a51b29ee2279e6ed8" data-timeline-item data-event-id="37469a1a51b29ee2279e6ed8" data-event-date="" data-search-text="mirrorface uses smb/windows admin shares technique t1021.002 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1021.002</span></div>
+    <h3>uses SMB/Windows Admin Shares</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_73b6e3ecbc583c0af098722e/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-fbff645426563d5bb5bb7996" data-timeline-item data-event-id="fbff645426563d5bb5bb7996" data-event-date="" data-search-text="mirrorface uses timestomp technique t1070.006 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high " data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1070.006</span></div>
+    <h3>uses Timestomp</h3>
+    <p class="excerpt">No bounded excerpt is available for this source.</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3b03c3af16ae7d4e0b31f6a2/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4b2a858914910f964ce4e342" data-timeline-item data-event-id="4b2a858914910f964ce4e342" data-event-date="" data-search-text="mirrorface uses windows service technique t1543.003 strongly_supported mirrorface attack against japanese organisations - jpcert/cc eyes high appendix c: mitre att&amp;ck" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_c9628e01342b561ea25256f2">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1543.003</span></div>
+    <h3>uses Windows Service</h3>
+    <p class="excerpt">Appendix C: MITRE ATT&amp;CK</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_c9628e01342b561ea25256f2/">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_baa0c7a821cbbbe7cba5edd0/">View evidence</a><a href="#tar_activity_19d105ffd678e30179a15b03">View activity record</a><a href="https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-fcc997f65b02d2a7716efd98" data-timeline-item data-event-id="fcc997f65b02d2a7716efd98" data-event-date="" data-search-text="mirrorface unknown anel software  explicit operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high anel" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>unknown ANEL</h3>
+    <p class="excerpt">ANEL</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_38e6aabb1c8d578c14539372/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c3bd6e4ed175a235572f3e66" data-timeline-item data-event-id="c3bd6e4ed175a235572f3e66" data-event-date="" data-search-text="mirrorface uses asyncrat software  explicit operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high asyncrat" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>uses AsyncRAT</h3>
+    <p class="excerpt">AsyncRAT</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_067b69f27d167a7f9da62b4c/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-bdb140bfe183f56a65b1b77c" data-timeline-item data-event-id="bdb140bfe183f56a65b1b77c" data-event-date="" data-search-text="mirrorface uses clipboard data technique t1115 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1115</span></div>
+    <h3>uses Clipboard Data</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_d8f4a2bde314b370b63edfc7/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-b24e854371a52a180056ac2e" data-timeline-item data-event-id="b24e854371a52a180056ac2e" data-event-date="" data-search-text="mirrorface uses cloud accounts technique t1585.003 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1585.003</span></div>
+    <h3>uses Cloud Accounts</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_b4ecf18784372c05dabb88ea/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-183f63f26880ea829839477f" data-timeline-item data-event-id="183f63f26880ea829839477f" data-event-date="" data-search-text="mirrorface uses compile after delivery technique t1027.004 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1027.004</span></div>
+    <h3>uses Compile After Delivery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_24be70311e4c6dfd5148a054/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-15acb7bc3aa90336829b28b9" data-timeline-item data-event-id="15acb7bc3aa90336829b28b9" data-event-date="" data-search-text="mirrorface uses data transfer size limits technique t1030 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1030</span></div>
+    <h3>uses Data Transfer Size Limits</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_471c2010a729ceaa655c766e/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-05f6d0112f760d848cd81f18" data-timeline-item data-event-id="05f6d0112f760d848cd81f18" data-event-date="" data-search-text="mirrorface uses debugger evasion technique t1622 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1622</span></div>
+    <h3>uses Debugger Evasion</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_90970c2c976ae98013f90423/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7286506c9a4e15fccce1bc8e" data-timeline-item data-event-id="7286506c9a4e15fccce1bc8e" data-event-date="" data-search-text="mirrorface uses deobfuscate/decode files or information technique t1140 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1140</span></div>
+    <h3>uses Deobfuscate/Decode Files or Information</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_821cd137cff3fc2da063efd6/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-ddb9ed4abf5564bf39e20ef2" data-timeline-item data-event-id="ddb9ed4abf5564bf39e20ef2" data-event-date="" data-search-text="mirrorface uses dll technique t1574.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1574.001</span></div>
+    <h3>uses DLL</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_02168193c09152e5709562d1/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-3c70e3e8b3816e734ff649bb" data-timeline-item data-event-id="3c70e3e8b3816e734ff649bb" data-event-date="" data-search-text="mirrorface uses domain account technique t1087.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1087.002</span></div>
+    <h3>uses Domain Account</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_8b470df166a5604b0c78fe70/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7a6b2f79937e2de258aadd61" data-timeline-item data-event-id="7a6b2f79937e2de258aadd61" data-event-date="" data-search-text="mirrorface uses domain generation algorithms technique t1568.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1568.002</span></div>
+    <h3>uses Domain Generation Algorithms</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_aeb186d1ab61a68f6e26fef7/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-2070ad48b0a2be3398b35a27" data-timeline-item data-event-id="2070ad48b0a2be3398b35a27" data-event-date="" data-search-text="mirrorface uses double file extension technique t1036.007 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1036.007</span></div>
+    <h3>uses Double File Extension</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_c1f5b62535456a7dd84f9cbe/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-f540cc4393fa9c5aad5f81fd" data-timeline-item data-event-id="f540cc4393fa9c5aad5f81fd" data-event-date="" data-search-text="mirrorface uses dynamic api resolution technique t1027.007 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1027.007</span></div>
+    <h3>uses Dynamic API Resolution</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_0d38a85eb0bd4ab286ac07a7/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-a106f832733bb95125ed64a4" data-timeline-item data-event-id="a106f832733bb95125ed64a4" data-event-date="" data-search-text="mirrorface uses email accounts technique t1585.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1585.002</span></div>
+    <h3>uses Email Accounts</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_19bcd5d2105003675732e133/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-137a1df2e03b5f5867fbffbe" data-timeline-item data-event-id="137a1df2e03b5f5867fbffbe" data-event-date="" data-search-text="mirrorface uses encrypted channel technique t1573 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1573</span></div>
+    <h3>uses Encrypted Channel</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_4036e356391d20dcd73fc2aa/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-2b1b7875e61730809ecb270d" data-timeline-item data-event-id="2b1b7875e61730809ecb270d" data-event-date="" data-search-text="mirrorface uses exfiltration over c2 channel technique t1041 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1041</span></div>
+    <h3>uses Exfiltration Over C2 Channel</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_78c7bc19ee6f45315f6d785e/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-cf7725218ad97834a95c671b" data-timeline-item data-event-id="cf7725218ad97834a95c671b" data-event-date="" data-search-text="mirrorface uses file deletion technique t1070.004 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1070.004</span></div>
+    <h3>uses File Deletion</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_0743ff206b634791a1794b82/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-ec110df700de18d4dc87da09" data-timeline-item data-event-id="ec110df700de18d4dc87da09" data-event-date="" data-search-text="mirrorface uses fileless storage technique t1027.011 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1027.011</span></div>
+    <h3>uses Fileless Storage</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_20a9514fbc84bee0a8695b35/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-56b1c417dfcbdcecdf936a1f" data-timeline-item data-event-id="56b1c417dfcbdcecdf936a1f" data-event-date="" data-search-text="mirrorface uses hidden files and directories technique t1564.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1564.001</span></div>
+    <h3>uses Hidden Files and Directories</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_e79eb66437e3226d8201e30e/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-235b262c17404e65af817a4b" data-timeline-item data-event-id="235b262c17404e65af817a4b" data-event-date="" data-search-text="mirrorface uses hidden window technique t1564.003 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1564.003</span></div>
+    <h3>uses Hidden Window</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_dfd3d6a6dafcdccfffcfd80f/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-ec4de07f084e569fd46ef19e" data-timeline-item data-event-id="ec4de07f084e569fd46ef19e" data-event-date="" data-search-text="mirrorface uses hiddenface software  explicit operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high hiddenface" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>uses HiddenFace</h3>
+    <p class="excerpt">HiddenFace</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_4453730f654ae31bdca4dcc9/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-36eeb8a96daae70f02701444" data-timeline-item data-event-id="36eeb8a96daae70f02701444" data-event-date="" data-search-text="mirrorface uses junk data technique t1001.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1001.001</span></div>
+    <h3>uses Junk Data</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3e695b3031571a365c8e44e9/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-fbfb5b6bd2500a6b7524e571" data-timeline-item data-event-id="fbfb5b6bd2500a6b7524e571" data-event-date="" data-search-text="mirrorface uses lodeinfo software  explicit operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high lodeinfo" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>uses LODEINFO</h3>
+    <p class="excerpt">LODEINFO</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3439316eb60967875b3ed711/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-ed94c98d394465989c0a1b4f" data-timeline-item data-event-id="ed94c98d394465989c0a1b4f" data-event-date="" data-search-text="mirrorface uses malicious file technique t1204.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1204.002</span></div>
+    <h3>uses Malicious File</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_214978075809abee23c84df1/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-06141cf0be7dcfbda1302a39" data-timeline-item data-event-id="06141cf0be7dcfbda1302a39" data-event-date="" data-search-text="mirrorface uses malicious link technique t1204.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1204.001</span></div>
+    <h3>uses Malicious Link</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_6acd5a70de5c9d2dce8b7f94/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-e263f490877f835a3c36dc0a" data-timeline-item data-event-id="e263f490877f835a3c36dc0a" data-event-date="" data-search-text="mirrorface uses malware technique t1588.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1588.001</span></div>
+    <h3>uses Malware</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_2ea74006d4edc3b75520b0fc/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-5eea4971260dab8bde6181bc" data-timeline-item data-event-id="5eea4971260dab8bde6181bc" data-event-date="" data-search-text="mirrorface uses malware technique t1587.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1587.001</span></div>
+    <h3>uses Malware</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_94fbfd1a528621be8411387a/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-3070d3ef82d357bf0815482e" data-timeline-item data-event-id="3070d3ef82d357bf0815482e" data-event-date="" data-search-text="mirrorface uses modify registry technique t1112 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1112</span></div>
+    <h3>uses Modify Registry</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_bcca8395797c4eb59a154acb/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-7266a269fede93fac16ee6ab" data-timeline-item data-event-id="7266a269fede93fac16ee6ab" data-event-date="" data-search-text="mirrorface uses msbuild technique t1127.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1127.001</span></div>
+    <h3>uses MSBuild</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_18907fe25c18a77824f858c8/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-b587be9fe6631f0b58bc42ff" data-timeline-item data-event-id="b587be9fe6631f0b58bc42ff" data-event-date="" data-search-text="mirrorface uses powershell technique t1059.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059.001</span></div>
+    <h3>uses PowerShell</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_e77664537842982ac42560dd/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-718dff2bb9b3e19ce374f439" data-timeline-item data-event-id="718dff2bb9b3e19ce374f439" data-event-date="" data-search-text="mirrorface uses process discovery technique t1057 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1057</span></div>
+    <h3>uses Process Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_81e766874f6c0d62f0bc0982/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-faff79aaf8c796deb85b3f59" data-timeline-item data-event-id="faff79aaf8c796deb85b3f59" data-event-date="" data-search-text="mirrorface uses process injection technique t1055 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1055</span></div>
+    <h3>uses Process Injection</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_363f8ce11da45c9f435678c1/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-99940d7ceabf240265f1413f" data-timeline-item data-event-id="99940d7ceabf240265f1413f" data-event-date="" data-search-text="mirrorface uses query registry technique t1012 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1012</span></div>
+    <h3>uses Query Registry</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_008ad8ca8b062c9ff7fc7664/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4e6e06d31bba198a8f81ad48" data-timeline-item data-event-id="4e6e06d31bba198a8f81ad48" data-event-date="" data-search-text="mirrorface uses registry run keys / startup folder technique t1547.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1547.001</span></div>
+    <h3>uses Registry Run Keys / Startup Folder</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_2a9bf46769d6c8b5a5146f94/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-3dd0231e6be0aa1599e56677" data-timeline-item data-event-id="3dd0231e6be0aa1599e56677" data-event-date="" data-search-text="mirrorface uses run virtual instance technique t1564.006 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1564.006</span></div>
+    <h3>uses Run Virtual Instance</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_f3388e844fc509e093af0b7b/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-e0e5f9342286dbc9f1c04bb2" data-timeline-item data-event-id="e0e5f9342286dbc9f1c04bb2" data-event-date="" data-search-text="mirrorface uses scheduled task technique t1053.005 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1053.005</span></div>
+    <h3>uses Scheduled Task</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_1b5b7b00b919b55948086f59/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-befd449be04a3733397f5141" data-timeline-item data-event-id="befd449be04a3733397f5141" data-event-date="" data-search-text="mirrorface uses screen capture technique t1113 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1113</span></div>
+    <h3>uses Screen Capture</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_83434778e2f41e535fa85760/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-bf1c795172d6dcad8db767e0" data-timeline-item data-event-id="bf1c795172d6dcad8db767e0" data-event-date="" data-search-text="mirrorface uses spearphishing link technique t1566.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1566.002</span></div>
+    <h3>uses Spearphishing Link</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_a2b56cc4142d819c3444bea7/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-4509cd3644f27867a4738402" data-timeline-item data-event-id="4509cd3644f27867a4738402" data-event-date="" data-search-text="mirrorface uses standard encoding technique t1132.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1132.001</span></div>
+    <h3>uses Standard Encoding</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_7169cd4bf98b290fddc67ff0/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-56574f4efb99246e292e02ab" data-timeline-item data-event-id="56574f4efb99246e292e02ab" data-event-date="" data-search-text="mirrorface uses system binary proxy execution technique t1218 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1218</span></div>
+    <h3>uses System Binary Proxy Execution</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_08e9acb68b7e0157786d23cf/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-dfbf00e2df973f33742883d6" data-timeline-item data-event-id="dfbf00e2df973f33742883d6" data-event-date="" data-search-text="mirrorface uses system information discovery technique t1082 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1082</span></div>
+    <h3>uses System Information Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_9d529d42e08b8364fe1bdfbb/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-87cc072941ebd57e6b530473" data-timeline-item data-event-id="87cc072941ebd57e6b530473" data-event-date="" data-search-text="mirrorface uses system owner/user discovery technique t1033 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1033</span></div>
+    <h3>uses System Owner/User Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_af0a8854d27f77ade28efb35/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-3ec5160eb0b7940bc0b5310f" data-timeline-item data-event-id="3ec5160eb0b7940bc0b5310f" data-event-date="" data-search-text="mirrorface uses system time discovery technique t1124 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1124</span></div>
+    <h3>uses System Time Discovery</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_ba4553787b3793b055b87cd5/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-db1ead9930fce7ec93c6d939" data-timeline-item data-event-id="db1ead9930fce7ec93c6d939" data-event-date="" data-search-text="mirrorface uses template injection technique t1221 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1221</span></div>
+    <h3>uses Template Injection</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_b2cad479b4032dee7de281c8/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-723fe9dba6842ceb1ffab3ca" data-timeline-item data-event-id="723fe9dba6842ceb1ffab3ca" data-event-date="" data-search-text="mirrorface uses timestomp technique t1070.006 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1070.006</span></div>
+    <h3>uses Timestomp</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3b03c3af16ae7d4e0b31f6a2/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-c8bdf3b0d418fefdc6a744e0" data-timeline-item data-event-id="c8bdf3b0d418fefdc6a744e0" data-event-date="" data-search-text="mirrorface uses tool technique t1588.002 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1588.002</span></div>
+    <h3>uses Tool</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_ea4d669a9e507e50ed0bf688/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-8851d766b4d438054fcde41e" data-timeline-item data-event-id="8851d766b4d438054fcde41e" data-event-date="" data-search-text="mirrorface uses web protocols technique t1071.001 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1071.001</span></div>
+    <h3>uses Web Protocols</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_3dcc9438c94f4d4c74a7b8d6/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-61c8a48a0b18f3d348bdcd7c" data-timeline-item data-event-id="61c8a48a0b18f3d348bdcd7c" data-event-date="" data-search-text="mirrorface uses windows command shell technique t1059.003 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1059.003</span></div>
+    <h3>uses Windows Command Shell</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_f90ba910c5b7bbfbe92d9efc/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-242a88abb901943d58d0bfca" data-timeline-item data-event-id="242a88abb901943d58d0bfca" data-event-date="" data-search-text="mirrorface uses windows management instrumentation technique t1047 strongly_supported operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mitre att&amp;ck techniques" data-target-type="technique" data-confidence="strongly_supported" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Technique</span> <span class="badge confidence">Strongly Supported</span></div><span class="timeline-attack-id">T1047</span></div>
+    <h3>uses Windows Management Instrumentation</h3>
+    <p class="excerpt">MITRE ATT&amp;CK techniques</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_886a49d0cbfd568f2b1c3713/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article><article class="timeline-event" id="evidence-5c3af38290c42f84c6844a6b" data-timeline-item data-event-id="5c3af38290c42f84c6844a6b" data-event-date="" data-search-text="mirrorface uses windows sandbox software  explicit operation akairyū: mirrorface invites europe to expo 2025 and revives anel backdoor high mirrorface" data-target-type="software" data-confidence="explicit" data-source-id="tar_source_a1d5ddb3c5f5e7972baf47dd">
+  <div class="timeline-date"><span>Date unavailable</span><small>No source publication date</small></div>
+  <div class="timeline-content">
+    <div class="card-topline"><div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div></div>
+    <h3>uses Windows Sandbox</h3>
+    <p class="excerpt">MirrorFace</p>
+    <div class="timeline-source"><span>Source</span><a href="../../sources/tar_source_a1d5ddb3c5f5e7972baf47dd/">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</a><small>High reliability</small></div>
+    <div class="timeline-links"><a href="../../relationships/tar_relationship_715fef419bfe4dc9105e7221/">View evidence</a><a href="#tar_activity_da5f064ec675d06a02fec8fd">View activity record</a><a href="https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor" rel="noopener noreferrer">Open source</a></div>
+  </div>
+</article></div>
+</section>
+</section>
+<section id="actor-panel-techniques" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-techniques" data-actor-tab-panel="techniques" hidden>
 <section class="attack-section">
   <div class="section-head"><div><p class="eyebrow">MITRE ATT&amp;CK</p><h2>Enterprise technique matrix</h2></div><p>55 observed technique(s)</p></div>
   <p class="matrix-note">The full active ATT&amp;CK technique catalog is shown. Historical Defense Evasion remains beside current Stealth and Defense Impairment for longitudinal reporting. Green cells are resolved actor-technique relationships; unhighlighted cells are not evidence of absence.</p>
@@ -35,7 +719,10 @@
     </div>
   </div>
 </section>
+</section>
+<section id="actor-panel-relationships" class="actor-tab-panel" role="tabpanel" aria-labelledby="actor-tab-relationships" data-actor-tab-panel="relationships" hidden>
 <section class="section-head"><div><p class="eyebrow">Evidence graph</p><h2>Relationships</h2></div></section>
+<div data-relationship-filter-root>
 <section class="relationship-filters" data-relationship-filters>
   <div class="filter-field filter-search"><label for="relationship-search">Search</label><input id="relationship-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-filter-search></div>
   <div class="filter-field"><label for="relationship-type">Type</label><select id="relationship-type" data-filter-target-type><option value="">All types</option><option value="command">Command</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
@@ -44,7 +731,7 @@
   <button class="button secondary filter-reset" type="button" data-filter-reset>Clear</button>
   <p class="search-status" aria-live="polite"><span data-visible-count>0</span> matching relationship(s)</p>
 </section>
-<div class="card-grid searchable-list"><article class="card relationship-card searchable" data-search-text="mirrorface earth kasha executes cmd.exe /c del c:\windows\system32\uianimation.xml /f /q taskkill.exe command    cmd strongly_supported deterministic mirrorface attack against japanese organisations - jpcert/cc eyes high after completing the series of reconnaissance activities, the attackers deleted the malware and stopped its own processes. this is supposed to be conducted for a purpose of covering up the traces to allow long-term persistence. earth kasha threat actors activity on the network" data-target-type="command" data-confidence="strongly_supported" data-source-ids="tar_source_c9628e01342b561ea25256f2">
+<div class="card-grid actor-relationship-grid searchable-list"><article class="card relationship-card searchable" data-search-text="mirrorface earth kasha executes cmd.exe /c del c:\windows\system32\uianimation.xml /f /q taskkill.exe command    cmd strongly_supported deterministic mirrorface attack against japanese organisations - jpcert/cc eyes high after completing the series of reconnaissance activities, the attackers deleted the malware and stopped its own processes. this is supposed to be conducted for a purpose of covering up the traces to allow long-term persistence. earth kasha threat actors activity on the network" data-target-type="command" data-confidence="strongly_supported" data-source-ids="tar_source_c9628e01342b561ea25256f2">
   <div class="card-topline">
     <div class="badge-row"><span class="badge">Command</span> <span class="badge confidence">Strongly Supported</span></div>
     <span class="count-pill">1 source(s)</span>
@@ -665,11 +1352,12 @@
   <div class="relationship-source"><span>Source</span><strong>MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</strong><small>High reliability</small></div>
   <a class="card-link" href="../../relationships/tar_relationship_baa0c7a821cbbbe7cba5edd0/">View evidence →</a>
 </article></div>
+</div>
+</section>
   </main>
   <footer class="site-footer">
     <div class="shell footer-row">
       <span>Evidence-backed current-state relationships.</span>
-      <span><a href="../../data/manifest.json">Manifest</a> · <a href="../../site-manifest.json">Site manifest</a></span>
     </div>
   </footer>
 </body>

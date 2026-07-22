@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_1d9cb2697c38b62f5b89465e",
+    "name": "Indrik Spider"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_1d9cb2697c38b62f5b89465e",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_07b6018ba60e4d4668968eba",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_ae932e790a225fa225adb2ca"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "strongly_supported",
+          "predicate": "associated_with",
+          "relationship_id": "tar_relationship_ae932e790a225fa225adb2ca",
+          "target_id": "tar_software_4c058d5c6c7a26e5272b98ff",
+          "target_name": "RansomHub",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_4f9bf446efc3b7e48c970586",
+      "source_ids": [
+        "tar_source_4f9bf446efc3b7e48c970586"
+      ],
+      "source_publication_date": "2026-03-16T00:00:00Z",
+      "source_publication_display": "2026-03-16",
+      "source_reliability": "high",
+      "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape",
+      "sources": [
+        {
+          "id": "tar_source_4f9bf446efc3b7e48c970586",
+          "published_at": "2026-03-16T00:00:00Z",
+          "published_display": "2026-03-16",
+          "reliability": "high",
+          "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1
+      },
+      "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

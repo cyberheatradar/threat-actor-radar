@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_e869348b9ce52f4047feb5d3",
+    "name": "Turla"
+  },
+  "generation_method": "deterministic-relationship-source-grouping-v1",
+  "records": [
+    {
+      "activity_date_basis": "unresolved",
+      "activity_end": null,
+      "activity_start": null,
+      "actor_id": "tar_actor_e869348b9ce52f4047feb5d3",
+      "date_precision": "unknown",
+      "description": "",
+      "id": "tar_activity_bd30488e769ce85eea2f08b5",
+      "record_type": "source_report",
+      "relationship_ids": [
+        "tar_relationship_77c04a092ba70f1fafe04618"
+      ],
+      "relationships": [
+        {
+          "attack_id": "",
+          "confidence": "explicit",
+          "predicate": "operates",
+          "relationship_id": "tar_relationship_77c04a092ba70f1fafe04618",
+          "target_id": "tar_software_298749444a257c5f4549ab01",
+          "target_name": "Uroburos",
+          "target_type": "software"
+        }
+      ],
+      "scope_status": "report_level_only",
+      "source_id": "tar_source_837379652f178cc48ab88430",
+      "source_ids": [
+        "tar_source_837379652f178cc48ab88430"
+      ],
+      "source_publication_date": "2026-06-25T00:00:00Z",
+      "source_publication_display": "2026-06-25",
+      "source_reliability": "high",
+      "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/stockstay-turla-intelligence-gathering",
+      "sources": [
+        {
+          "id": "tar_source_837379652f178cc48ab88430",
+          "published_at": "2026-06-25T00:00:00Z",
+          "published_display": "2026-06-25",
+          "reliability": "high",
+          "title": "The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/stockstay-turla-intelligence-gathering"
+        }
+      ],
+      "target_type_counts": {
+        "software": 1
+      },
+      "title": "The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}

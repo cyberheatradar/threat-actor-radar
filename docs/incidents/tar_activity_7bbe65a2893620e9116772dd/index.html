@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Canonical incident record for April shipping and transportation incident">
+  <title>April shipping and transportation incident · ThreatActorRadar</title>
+  <link rel="stylesheet" href="../../assets/app.css?v=v0.14.7">
+  <script defer src="../../assets/app.js?v=v0.14.7"></script>
+</head>
+<body data-page="incident-detail">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <div class="brand-cluster">
+        <a class="brand" href="../../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.7</strong></div>
+      </div>
+      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/">Actors</a><a href="../../activities/" aria-current="page" class="active">Activities</a><a href="../../relationships/">Relationships</a><a href="../../attack-flows/">Attack Flows</a><a href="../../sources/">Sources</a></nav>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <nav class="breadcrumbs"><a href="../../activities/">Activities</a><span>/</span><a href="../">Incidents</a><span>/</span><span>April shipping and transportation incident</span></nav>
+<section class="page-title detail-title"><p class="eyebrow">Canonical Incident</p><h1>April shipping and transportation incident</h1><div><span class="badge">Incident</span> <span class="badge">Day</span></div></section>
+<section class="detail-grid activity-overview"><article class="panel"><h2>Activity</h2><p>Huntress-reported incident affecting a shipping and transportation organization. Visibility begins with an RDP session on April 9 and continues through ransomware redeployment and log clearing on April 10.</p><dl><dt>Actor</dt><dd><a href="../../actors/tar_actor_ac4f9ded840a918ef8259ea5/">The Gentlemen</a></dd><dt>Activity period</dt><dd><strong>2026-04-09 → 2026-04-10</strong></dd><dt>Date basis</dt><dd>Explicit Source Date</dd><dt>Date precision</dt><dd>Day</dd></dl><a class="button" href="../../attack-flows/the-gentlemen/?scope=huntress-april-shipping">Open scoped Attack Flow</a></article><article class="panel"><h2>Source publications</h2><p>Source publication dates are provenance metadata and are not used as activity dates.</p><ul><li><a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a> <span class="badge">High</span> <small>Published 2026-05-21</small></li></ul></article></section>
+<section class="evidence-section"><p class="eyebrow">Canonical activity evidence</p><h2>Scope and date evidence</h2><blockquote><p>On April 10, the attacker also cleared the System , Application , and Security Windows Event Logs.</p><footer>Date evidence · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote><blockquote><p>The first point of visibility we had for the Windows Event Logs started on April 9 and showed the threat actor initiating a Remote Desktop Protocol (RDP) connection using a compromised user’s account.</p><footer>Date evidence · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></section>
+<section class="section-head"><div><p class="eyebrow">Canonical sequence records</p><h2>Action Observations</h2></div><p>6 canonical action(s)</p></section>
+<div class="action-observation-list"><article class="action-observation" id="action-tar_action_48f04ad32122228cb8ac7caf" data-flow-node-id="flow-node:tg:huntress-april:rdp-session">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div><span class="count-pill">April 9</span></div>
+  <h3>RDP session established with a compromised account</h3>
+  <p>First point visible in the available logs; not claimed as initial access.</p>
+  <p class="timeline-note">Sequence hint: 0. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_03382529d7db5e543868f949"><p>The first point of visibility we had for the Windows Event Logs started on April 9 and showed the threat actor initiating a Remote Desktop Protocol (RDP) connection using a compromised user’s account. This doesn’t necessarily mean that initial access was achieved via RDP; rather…</p><footer>Canonical EvidenceSpan · source block 12 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_9886f2d1718e87ca311ce459" data-flow-node-id="flow-node:tg:huntress-april:local-encryptor-attempt">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div></div>
+  <h3>Attempt local execution of win.exe from the user Documents folder</h3>
+  <p>The command is source-observed but redacted and not execution-ready.</p>
+  <p class="timeline-note">Sequence hint: 1. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_9680bb6ae47e58534ad10eab"><p>Shortly after the threat actor initiated and then established the RDP connection, they attempted to run the file encryptor ( win.exe ) locally from the Documents folder, as seen in the following command line:</p><footer>Canonical EvidenceSpan · source block 13 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote><blockquote id="evidence-tar_evidence_ef4ab66ae62a793f61627c47"><p>C:\Users\REDACTED\Documents\win.exe --password [REDACTED_CREDENTIAL] --T 200 --superfast</p><footer>Canonical EvidenceSpan · source block 14 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote><blockquote id="evidence-tar_evidence_c30e528d65817379317f4b59"><p>Windows Event Logs (specifically Microsoft Defender Event IDs 1116 and 1117) showed Microsoft Defender detecting and blocking this attempt. The logs also showed Defender detecting and blocking Trojan:Win32/MpTamperBulkExcl.H , a PowerShell script that was executed and attempted…</p><footer>Canonical EvidenceSpan · source block 15 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_a632ac81f44a128f8ae41ffd" data-flow-node-id="flow-node:tg:huntress-april:scheduled-task-redeploy">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div></div>
+  <h3>Create Scheduled Tasks and use one to rerun the encryptor</h3>
+  <p>The report does not provide the Scheduled Task command for this incident.</p>
+  <p class="timeline-note">Sequence hint: 2. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_990ff68fa3e99daef36fe0a3"><p>The threat actor then created a series of Scheduled Tasks (likely on the Domain Controller, as we didn’t see the Event Log Microsoft-Windows-TaskScheduler/140 records that we would expect to see with tasks created locally on the endpoint). One of these was used to run the file e…</p><footer>Canonical EvidenceSpan · source block 16 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_be0b91241449c953969cbce7" data-flow-node-id="flow-node:tg:huntress-april:clear-logs">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div><span class="count-pill">April 10</span></div>
+  <h3>Clear Security, System, and Application event logs</h3>
+  <p>Exact placement relative to the redeployment steps is not stated.</p>
+  <p class="timeline-note">Sequence hint: 3. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_2c41df8767db7882773fe0c6"><p>On April 10, the attacker also cleared the System , Application , and Security Windows Event Logs. We get a clear forensic breadcrumb here through a series of Event Logs (specifically Event ID 104 for the Application and System Logs, and Event ID 1102 for the Security log, showi…</p><footer>Canonical EvidenceSpan · source block 17 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_8dc491d9beca2ec191f92c04" data-flow-node-id="flow-node:tg:huntress-april:netlogon-system-deploy">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div><span class="count-pill">April 10</span></div>
+  <h3>Execute a second win.exe from NETLOGON as SYSTEM via CcmExec.exe</h3>
+  <p>The report does not prove that the Scheduled Task caused this specific execution.</p>
+  <p class="timeline-note">Sequence hint: 4. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_6a2844752940ceb2c22e280b"><p>These showed a second instance of the same win.exe ransomware payload detected on April 10, which was found on the NETLOGON share and executed by the SYSTEM account through the Configuration Manager Client ( CcmExec.exe ). As Figure 1 indicates (and Microsoft Defender Event ID 1…</p><footer>Canonical EvidenceSpan · source block 20 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_1961cec01f1cbde1df32bbf5" data-flow-node-id="flow-node:tg:huntress-april:encrypt-and-note">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed</span> <span class="badge confidence">High</span></div></div>
+  <h3>Encrypt files and drop README-GENTLEMEN.txt</h3>
+  <p>Observed after successful payload deployment.</p>
+  <p class="timeline-note">Sequence hint: 5. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_475b71db3f9454f27e545199"><p>After the payload was successfully deployed, files were encrypted with an extension .fjn1jw and the ransom note ( README-GENTLEMEN.txt ) was dropped.</p><footer>Canonical EvidenceSpan · source block 21 · <a href="../../sources/tar_source_f44fb5d6275a5774a4cacbe5/">The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress</a></footer></blockquote></div>
+
+</article></div>
+<section class="section-head"><div><p class="eyebrow">Canonical graph references</p><h2>Relationships</h2></div><p>0 linked relationship(s)</p></section>
+<div class="card-grid"><div class="empty-state">No linked relationships available.</div></div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>Evidence-backed current-state relationships.</span>
+    </div>
+  </footer>
+</body>
+</html>

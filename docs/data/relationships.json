@@ -35,7 +35,7 @@
       "source_redaction_present": true
     }
   ],
-  "data_version": "v0.2.0",
+  "data_version": "v0.3.2",
   "relationships": [
     {
       "actor_id": "tar_actor_96d4d38ba100fff9a7473b1f",

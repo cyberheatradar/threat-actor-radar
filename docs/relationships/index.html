@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Resolved threat actor relationships">
   <title>Relationships · ThreatActorRadar</title>
-  <link rel="stylesheet" href="../assets/app.css?v=v0.12.2-dev">
-  <script defer src="../assets/app.js?v=v0.12.2-dev"></script>
+  <link rel="stylesheet" href="../assets/app.css?v=v0.14.7">
+  <script defer src="../assets/app.js?v=v0.14.7"></script>
 </head>
 <body data-page="relationships">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,13 +14,14 @@
     <div class="shell header-row">
       <div class="brand-cluster">
         <a class="brand" href="../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
-        <div class="build-meta" aria-label="Build version"><strong>v0.12.2-dev</strong></div>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.7</strong></div>
       </div>
-      <nav aria-label="Primary"><a href="../index.html">Overview</a><a href="../actors/">Actors</a><a href="../relationships/" aria-current="page" class="active">Relationships</a><a href="../sources/">Sources</a></nav>
+      <nav aria-label="Primary"><a href="../index.html">Overview</a><a href="../actors/">Actors</a><a href="../activities/">Activities</a><a href="../relationships/" aria-current="page" class="active">Relationships</a><a href="../attack-flows/">Attack Flows</a><a href="../sources/">Sources</a></nav>
     </div>
   </header>
   <main id="main" class="shell">
     <section class="page-title"><p class="eyebrow">Resolved facts</p><h1>Relationships</h1><p>Each relationship links to bounded evidence excerpts and public sources.</p></section>
+<div data-relationship-filter-root>
 <section class="relationship-filters" data-relationship-filters>
   <div class="filter-field filter-search"><label for="relationship-search">Search</label><input id="relationship-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-filter-search></div>
   <div class="filter-field"><label for="relationship-type">Type</label><select id="relationship-type" data-filter-target-type><option value="">All types</option><option value="command">Command</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
@@ -1200,11 +1201,11 @@
   <div class="relationship-source"><span>Source</span><strong>The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog</strong><small>High reliability</small></div>
   <a class="card-link" href="../relationships/tar_relationship_77c04a092ba70f1fafe04618/">View evidence →</a>
 </article></div>
+</div>
   </main>
   <footer class="site-footer">
     <div class="shell footer-row">
       <span>Evidence-backed current-state relationships.</span>
-      <span><a href="../data/manifest.json">Manifest</a> · <a href="../site-manifest.json">Site manifest</a></span>
     </div>
   </footer>
 </body>

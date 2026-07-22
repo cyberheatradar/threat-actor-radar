@@ -1,48 +1,62 @@
 {
-  "data_version": "v0.2.0",
+  "data_version": "v0.3.2",
   "schema": "threatactorradar.public-sources/v1",
   "sources": [
     {
       "id": "tar_source_1c7de0cfeb2bfe740e1d6b9d",
+      "published_at": "2025-09-09T00:00:00Z",
       "reliability": "high",
       "title": "Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed",
       "url": "https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html"
     },
     {
       "id": "tar_source_4f9bf446efc3b7e48c970586",
+      "published_at": "2026-03-16T00:00:00Z",
       "reliability": "high",
       "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape"
     },
     {
       "id": "tar_source_71967503afd8c6ca264cc5ff",
+      "published_at": "2026-05-13T00:00:00Z",
       "reliability": "high",
       "title": "Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft",
       "url": "https://www.trendmicro.com/en_us/research/26/e/analyzing-teampcp-supply-chain-attacks.html"
     },
     {
       "id": "tar_source_837379652f178cc48ab88430",
+      "published_at": "2026-06-25T00:00:00Z",
       "reliability": "high",
       "title": "The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/stockstay-turla-intelligence-gathering"
     },
     {
       "id": "tar_source_840f177f8bc026ea670b58bf",
+      "published_at": "2026-03-31T21:00:39Z",
       "reliability": "high",
       "title": "Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure",
       "url": "https://unit42.paloaltonetworks.com/teampcp-supply-chain-attacks"
     },
     {
       "id": "tar_source_a1d5ddb3c5f5e7972baf47dd",
+      "published_at": null,
       "reliability": "high",
       "title": "Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor",
       "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor"
     },
     {
       "id": "tar_source_c9628e01342b561ea25256f2",
+      "published_at": null,
       "reliability": "high",
       "title": "MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes",
       "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+    },
+    {
+      "id": "tar_source_f44fb5d6275a5774a4cacbe5",
+      "published_at": "2026-05-21T07:00:00Z",
+      "reliability": "high",
+      "title": "The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress",
+      "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
     }
   ]
 }
