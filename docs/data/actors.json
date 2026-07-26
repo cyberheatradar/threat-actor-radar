@@ -27,6 +27,33 @@
     },
     {
       "actor_types": [
+        "cybercriminal",
+        "extortion",
+        "ransomware-as-a-service"
+      ],
+      "aliases": [],
+      "entity_type": "ransomware_operation",
+      "id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "name": "RansomHouse",
+      "tracking_names": [
+        {
+          "name": "Jolly Scorpius",
+          "scope": "Tracks the operator group described as running the RansomHouse RaaS operation.",
+          "source_url": "https://unit42.paloaltonetworks.com/ransomhouse-encryption-upgrade/",
+          "vendor": "Palo Alto Networks Unit 42"
+        },
+        {
+          "name": "Water Balinsugu",
+          "scope": "Tracks the RansomHouse operation.",
+          "source_url": "https://www.trendmicro.com/ja_jp/jp-security/25/k/securitytrend-20251110-01.html",
+          "vendor": "Trend Micro"
+        }
+      ],
+      "watch_priority": "high",
+      "watch_rationale": "Priority ransomware and extortion operation. Keep operator, affiliate, malware-family, and vendor tracking-name boundaries explicit."
+    },
+    {
+      "actor_types": [
         "cloud-focused",
         "cybercriminal",
         "supply-chain"
@@ -39,7 +66,9 @@
       ],
       "entity_type": "threat_actor_group",
       "id": "tar_actor_49ddcf6ca5281ad34be31a13",
-      "name": "TeamPCP"
+      "name": "TeamPCP",
+      "watch_priority": "high",
+      "watch_rationale": "Rapidly evolving software-supply-chain and credential-theft activity."
     },
     {
       "actor_types": [
@@ -84,7 +113,9 @@
       ],
       "entity_type": "threat_actor_group",
       "id": "tar_actor_96d4d38ba100fff9a7473b1f",
-      "name": "MirrorFace"
+      "name": "MirrorFace",
+      "watch_priority": "high",
+      "watch_rationale": "Japan-focused cyberespionage actor with current ATT&CK coverage."
     },
     {
       "actor_types": [
@@ -94,7 +125,9 @@
       "aliases": [],
       "entity_type": "ransomware_operation",
       "id": "tar_actor_ac4f9ded840a918ef8259ea5",
-      "name": "The Gentlemen"
+      "name": "The Gentlemen",
+      "watch_priority": "high",
+      "watch_rationale": "Emerging ransomware operation with adaptive defense-evasion tradecraft."
     },
     {
       "actor_types": [
@@ -116,6 +149,6 @@
       "name": "Turla"
     }
   ],
-  "data_version": "v0.3.2",
+  "data_version": "v0.3.4",
   "schema": "threatactorradar.public-actors/v1"
 }

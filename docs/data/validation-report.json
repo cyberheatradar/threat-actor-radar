@@ -1,16 +1,16 @@
 {
   "counts": {
-    "actions": 35,
-    "activities": 3,
-    "actors": 8,
+    "actions": 43,
+    "activities": 4,
+    "actors": 9,
     "commands": 2,
     "excluded_observations": 0,
-    "relationships": 117,
-    "software": 12,
-    "sources": 8,
+    "relationships": 119,
+    "software": 14,
+    "sources": 9,
     "techniques": 697
   },
-  "data_version": "v0.3.2",
+  "data_version": "v0.3.4",
   "leak_findings": [],
   "leak_scan": "pass",
   "projection_status": "ok",
@@ -19,6 +19,6 @@
   "schema": "threatactorradar.validation-report/v1",
   "schema_errors": [],
   "schema_validation": "pass",
-  "snapshot_at": "2026-07-22T22:16:22.678380+09:00",
+  "snapshot_at": "2026-07-26T18:37:26.776079+09:00",
   "status": "pass"
 }

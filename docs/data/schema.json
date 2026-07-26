@@ -353,6 +353,49 @@
         "name": {
           "minLength": 1,
           "type": "string"
+        },
+        "tracking_names": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "scope": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source_url": {
+                "pattern": "^https://",
+                "type": "string"
+              },
+              "vendor": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "vendor",
+              "scope",
+              "source_url"
+            ],
+            "type": "object"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "watch_priority": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "watch_rationale": {
+          "minLength": 1,
+          "type": "string"
         }
       },
       "required": [
@@ -374,7 +417,7 @@
           "type": "array"
         },
         "data_version": {
-          "const": "v0.1.0"
+          "const": "v0.3.3"
         },
         "schema": {
           "const": "threatactorradar.public-actors/v1"
@@ -551,7 +594,7 @@
           "type": "array"
         },
         "data_version": {
-          "const": "v0.1.0"
+          "const": "v0.3.3"
         },
         "relationships": {
           "items": {
@@ -660,7 +703,7 @@
       "additionalProperties": false,
       "properties": {
         "data_version": {
-          "const": "v0.1.0"
+          "const": "v0.3.3"
         },
         "schema": {
           "const": "threatactorradar.public-sources/v1"

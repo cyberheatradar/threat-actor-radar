@@ -35,7 +35,7 @@
       "source_redaction_present": true
     }
   ],
-  "data_version": "v0.3.2",
+  "data_version": "v0.3.4",
   "relationships": [
     {
       "actor_id": "tar_actor_96d4d38ba100fff9a7473b1f",
@@ -2200,6 +2200,62 @@
       "type": "actor_technique_relationship"
     },
     {
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "confidence": "explicit",
+      "evidence": [
+        {
+          "excerpt": "Mario",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "RansomHouse",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "RansomHouse uses an encryptor known as Mario.",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "id": "tar_relationship_982388ac1fd66d7505bbc035",
+      "predicate": "uses",
+      "resolution_method": "deterministic",
+      "resolution_status": "resolved",
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ],
+      "target_id": "tar_software_6787cece97531382c7514ac4",
+      "target_type": "software",
+      "type": "actor_software_relationship"
+    },
+    {
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "confidence": "explicit",
+      "evidence": [
+        {
+          "excerpt": "MrAgent",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "RansomHouse",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "RansomHouse uses a management tool called MrAgent, designed to automate and track ransomware deployments across different hypervisor systems in an ESXi environment.",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "id": "tar_relationship_9b2d5bc1bb62e231bb5d3c54",
+      "predicate": "operates",
+      "resolution_method": "deterministic",
+      "resolution_status": "resolved",
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ],
+      "target_id": "tar_software_b0950ed3da6ece53ef301109",
+      "target_type": "software",
+      "type": "actor_software_relationship"
+    },
+    {
       "actor_id": "tar_actor_49ddcf6ca5281ad34be31a13",
       "confidence": "strongly_supported",
       "evidence": [
@@ -3378,11 +3434,29 @@
     },
     {
       "aliases": [
+        "Mario",
+        "Mario ESXi",
+        "Mario Locker"
+      ],
+      "id": "tar_software_6787cece97531382c7514ac4",
+      "name": "Mario",
+      "software_type": "malware"
+    },
+    {
+      "aliases": [
         "Windows Sandbox"
       ],
       "id": "tar_software_750b046eb63892be61641325",
       "name": "Windows Sandbox",
       "software_type": "tool"
+    },
+    {
+      "aliases": [
+        "MrAgent"
+      ],
+      "id": "tar_software_b0950ed3da6ece53ef301109",
+      "name": "MrAgent",
+      "software_type": "malware"
     },
     {
       "aliases": [

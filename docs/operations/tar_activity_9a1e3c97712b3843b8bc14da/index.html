@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Canonical operation record for RansomHouse ESXi operation observed since December 2021">
+  <title>RansomHouse ESXi operation observed since December 2021 · ThreatActorRadar</title>
+  <link rel="stylesheet" href="../../assets/app.css?v=v0.14.25-dev">
+  <script defer src="../../assets/app.js?v=v0.14.25-dev"></script>
+</head>
+<body data-page="operation-detail">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <div class="brand-cluster">
+        <a class="brand" href="../../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.25</strong></div>
+      </div>
+      <nav aria-label="Primary"><a href="../../index.html">Overview</a><a href="../../actors/">Actors</a><a href="../../activities/" aria-current="page" class="active">Activities</a><a href="../../relationships/">Relationships</a><a href="../../attack-flows/">Attack Flows</a><a href="../../sources/">Sources</a></nav>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <nav class="breadcrumbs"><a href="../../activities/">Activities</a><span>/</span><a href="../">Operations</a><span>/</span><span>RansomHouse ESXi operation observed since December 2021</span></nav>
+<section class="page-title detail-title"><p class="eyebrow">Canonical Operation</p><h1>RansomHouse ESXi operation observed since December 2021</h1><div><span class="badge">Operation</span> <span class="badge">Month</span></div></section>
+<section class="detail-grid activity-overview"><article class="panel"><h2>Activity</h2><p>Unit 42 actor-level reconstruction of the RansomHouse RaaS chain: affiliate infiltration, MrAgent control, data theft, Mario deployment and encryption, followed by extortion.</p><dl><dt>Actor</dt><dd><a href="../../actors/tar_actor_214d4cd8226ac1cd85dca51d/">RansomHouse</a></dd><dt>Activity period</dt><dd><strong>2021-12 → 2025-12</strong></dd><dt>Date basis</dt><dd>Bounded Source Range</dd><dt>Date precision</dt><dd>Month</dd></dl><a class="button" href="../../attack-flows/ransomhouse/?scope=unit42-esxi-operation">Open scoped Attack Flow</a></article><article class="panel"><h2>Source publications</h2><p>Source publication dates are provenance metadata and are not used as activity dates.</p><ul><li><a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a> <span class="badge">High</span> <small>Published 2025-12-17</small></li></ul></article></section>
+<section class="evidence-section"><p class="eyebrow">Canonical activity evidence</p><h2>Scope and date evidence</h2><blockquote><p>RansomHouse is a ransomware-as-a-service (RaaS) operation run by a group that we track as Jolly Scorpius. Recent samples of the associated binaries used in RansomHouse operations reveal a significant upgrade in encryption. This article explores the upgrade of RansomHouse encrypt…</p><footer>Attribution evidence · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote><blockquote><p>The scale of the group&#x27;s operations is significant. At the time of this article, at least 123 victims were listed on the RansomHouse data leak site as having their data disclosed or sold since December 2021.</p><footer>Date evidence · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></section>
+<section class="section-head"><div><p class="eyebrow">Canonical sequence records</p><h2>Action Observations</h2></div><p>8 canonical action(s)</p></section>
+<div class="action-observation-list"><article class="action-observation" id="action-tar_action_b1fbd0d60dd24e0ca65f0116" data-flow-node-id="flow-node:rh:unit42:initial-access">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Gain initial access through phishing, social engineering, or exploitation</h3>
+  <p>Unit 42 describes alternative affiliate initial-access paths; no single victim path is asserted.</p>
+  <p class="timeline-note">Sequence hint: 0. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_7e27b8cf53aaf32a336161d6"><p>In this phase, attackers compromise victims through spear phishing emails or other social engineering techniques. In addition to email, initial access vectors include vulnerable systems in a victim&#x27;s environment that attackers can compromise through zero-day or other exploits.</p><footer>Canonical EvidenceSpan · source block 48 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_2bd33d64d9dfc287d018c2c4" data-flow-node-id="flow-node:rh:unit42:recon-lateral">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Reconnoiter, escalate privileges, and move laterally</h3>
+
+  <p class="timeline-note">Sequence hint: 1. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_adf0693d6e6353abaf8e5434"><p>After achieving initial access, attackers typically use third-party tools and frameworks to explore the victim&#x27;s network. The remainder of the infiltration phase includes reconnaissance to map the environment, privilege escalation, lateral movement and identifying valuable or se…</p><footer>Canonical EvidenceSpan · source block 49 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_beada4c2f52128b798373295" data-flow-node-id="flow-node:rh:unit42:deploy-mragent">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Deploy MrAgent to the ESXi hypervisor</h3>
+
+  <p class="timeline-note">Sequence hint: 2. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_76cafb38bcdeb6175dccce7a"><p>After infiltrating the environment, an attacker deploys MrAgent onto the victim&#x27;s ESXi hypervisor. MrAgent establishes a persistent connection to the attacker&#x27;s command-and-control (C2) server.</p><footer>Canonical EvidenceSpan · source block 63 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_250a9bd6f292a78c12c34500" data-flow-node-id="flow-node:rh:unit42:mragent-c2">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Establish persistent MrAgent command-and-control</h3>
+
+  <p class="timeline-note">Sequence hint: 3. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_76cafb38bcdeb6175dccce7a"><p>After infiltrating the environment, an attacker deploys MrAgent onto the victim&#x27;s ESXi hypervisor. MrAgent establishes a persistent connection to the attacker&#x27;s command-and-control (C2) server.</p><footer>Canonical EvidenceSpan · source block 63 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_848205e2f4f63d6452863098" data-flow-node-id="flow-node:rh:unit42:exfiltrate">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Exfiltrate sensitive data through attacker-controlled infrastructure</h3>
+
+  <p class="timeline-note">Sequence hint: 4. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_a25f7ca750b604fa2ec83df9"><p>Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…</p><footer>Canonical EvidenceSpan · source block 64 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_3a7867d18d045055c3de8f6b" data-flow-node-id="flow-node:rh:unit42:execute-mario">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Use MrAgent to download and execute the Mario encryptor</h3>
+
+  <p class="timeline-note">Sequence hint: 5. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_a25f7ca750b604fa2ec83df9"><p>Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…</p><footer>Canonical EvidenceSpan · source block 64 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_2df1374b1f5260ff0890c32d" data-flow-node-id="flow-node:rh:unit42:encrypt-vms">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Malware Behavior</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Create the ransom note and encrypt targeted virtual-machine files</h3>
+  <p>Unit 42 splits the VM-encryption and ransom-note statements across separate source blocks; both EvidenceSpans are retained.</p>
+  <p class="timeline-note">Sequence hint: 6. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_a25f7ca750b604fa2ec83df9"><p>Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…</p><footer>Canonical EvidenceSpan · source block 64 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote><blockquote id="evidence-tar_evidence_869ccd36018de8cb9f506400"><p>RansomHouse uses an encryptor known as Mario. After encrypting files, Mario drops a ransom note that contains instructions on how victims can recover their data.</p><footer>Canonical EvidenceSpan · source block 56 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article><article class="action-observation" id="action-tar_action_6c2d2b7408899f29dbeda1dd" data-flow-node-id="flow-node:rh:unit42:extort">
+  <div class="card-topline"><div class="badge-row"><span class="badge">Action</span> <span class="badge">Observed Capability</span> <span class="badge confidence">High</span></div></div>
+  <h3>Negotiate, disclose victim information, and threaten publication</h3>
+
+  <p class="timeline-note">Sequence hint: 7. Evidence below is owned by this canonical Action Observation and is referenced by Attack Flow; it is not Flow-specific evidence.</p>
+  <div class="action-evidence"><blockquote id="evidence-tar_evidence_f7d9218dc6533b73b687b29f"><p>Once a victim&#x27;s data has been stolen and encrypted, the attack chain transitions to the extortion phase. RaaS operators are generally responsible for this phase, which often involves negotiations via dedicated chat rooms. Operators validate their threats through strategic inform…</p><footer>Canonical EvidenceSpan · source block 58 · <a href="../../sources/tar_source_5ec7bd23e66046e8b36ab3b5/">From Linear to Complex: An Upgrade in RansomHouse Encryption</a></footer></blockquote></div>
+
+</article></div>
+<section class="section-head"><div><p class="eyebrow">Canonical graph references</p><h2>Relationships</h2></div><p>0 linked relationship(s)</p></section>
+<div class="card-grid"><div class="empty-state">No linked relationships available.</div></div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>Evidence-backed current-state relationships.</span>
+    </div>
+  </footer>
+</body>
+</html>

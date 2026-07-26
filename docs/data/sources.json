@@ -1,5 +1,5 @@
 {
-  "data_version": "v0.3.2",
+  "data_version": "v0.3.4",
   "schema": "threatactorradar.public-sources/v1",
   "sources": [
     {
@@ -15,6 +15,13 @@
       "reliability": "high",
       "title": "Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog",
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape"
+    },
+    {
+      "id": "tar_source_5ec7bd23e66046e8b36ab3b5",
+      "published_at": "2025-12-17T11:00:54Z",
+      "reliability": "high",
+      "title": "From Linear to Complex: An Upgrade in RansomHouse Encryption",
+      "url": "https://unit42.paloaltonetworks.com/ransomhouse-encryption-upgrade"
     },
     {
       "id": "tar_source_71967503afd8c6ca264cc5ff",

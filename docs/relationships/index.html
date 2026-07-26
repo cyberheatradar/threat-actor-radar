@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Resolved threat actor relationships">
   <title>Relationships · ThreatActorRadar</title>
-  <link rel="stylesheet" href="../assets/app.css?v=v0.14.7">
-  <script defer src="../assets/app.js?v=v0.14.7"></script>
+  <link rel="stylesheet" href="../assets/app.css?v=v0.14.25-dev">
+  <script defer src="../assets/app.js?v=v0.14.25-dev"></script>
 </head>
 <body data-page="relationships">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -14,7 +14,7 @@
     <div class="shell header-row">
       <div class="brand-cluster">
         <a class="brand" href="../index.html"><span class="brand-mark">TAR</span><span>ThreatActorRadar</span></a>
-        <div class="build-meta" aria-label="Build version"><strong>v0.14.7</strong></div>
+        <div class="build-meta" aria-label="Build version"><strong>v0.14.25</strong></div>
       </div>
       <nav aria-label="Primary"><a href="../index.html">Overview</a><a href="../actors/">Actors</a><a href="../activities/">Activities</a><a href="../relationships/" aria-current="page" class="active">Relationships</a><a href="../attack-flows/">Attack Flows</a><a href="../sources/">Sources</a></nav>
     </div>
@@ -26,7 +26,7 @@
   <div class="filter-field filter-search"><label for="relationship-search">Search</label><input id="relationship-search" type="search" placeholder="Target, evidence, source, or ATT&amp;CK ID" autocomplete="off" data-filter-search></div>
   <div class="filter-field"><label for="relationship-type">Type</label><select id="relationship-type" data-filter-target-type><option value="">All types</option><option value="command">Command</option><option value="software">Software</option><option value="technique">Technique</option></select></div>
   <div class="filter-field"><label for="relationship-confidence">Confidence</label><select id="relationship-confidence" data-filter-confidence><option value="">All confidence</option><option value="explicit">Explicit</option><option value="strongly_supported">Strongly Supported</option></select></div>
-  <div class="filter-field"><label for="relationship-source">Source</label><select id="relationship-source" data-filter-source><option value="">All sources</option><option value="tar_source_71967503afd8c6ca264cc5ff">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</option><option value="tar_source_c9628e01342b561ea25256f2">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</option><option value="tar_source_a1d5ddb3c5f5e7972baf47dd">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</option><option value="tar_source_4f9bf446efc3b7e48c970586">Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog</option><option value="tar_source_837379652f178cc48ab88430">The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog</option><option value="tar_source_1c7de0cfeb2bfe740e1d6b9d">Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed</option><option value="tar_source_840f177f8bc026ea670b58bf">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</option></select></div>
+  <div class="filter-field"><label for="relationship-source">Source</label><select id="relationship-source" data-filter-source><option value="">All sources</option><option value="tar_source_71967503afd8c6ca264cc5ff">Analyzing TeamPCP’s Supply Chain Attacks: Checkmarx KICS and elementary-data in CI/CD Credential Theft</option><option value="tar_source_5ec7bd23e66046e8b36ab3b5">From Linear to Complex: An Upgrade in RansomHouse Encryption</option><option value="tar_source_c9628e01342b561ea25256f2">MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</option><option value="tar_source_a1d5ddb3c5f5e7972baf47dd">Operation AkaiRyū: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor</option><option value="tar_source_4f9bf446efc3b7e48c970586">Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape | Google Cloud Blog</option><option value="tar_source_837379652f178cc48ab88430">The Latest Addition to Turla’s Intelligence Gathering Apparatus | Google Cloud Blog</option><option value="tar_source_1c7de0cfeb2bfe740e1d6b9d">Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed</option><option value="tar_source_840f177f8bc026ea670b58bf">Weaponizing the Protectors: TeamPCP’s Multi-Stage Supply Chain Attack on Security Infrastructure</option></select></div>
   <button class="button secondary filter-reset" type="button" data-filter-reset>Clear</button>
   <p class="search-status" aria-live="polite"><span data-visible-count>0</span> matching relationship(s)</p>
 </section>
@@ -690,6 +690,26 @@
   <dl class="relationship-facts"><div><dt>Confidence</dt><dd>Strongly Supported</dd></div><div><dt>Resolution</dt><dd>Deterministic</dd></div><div><dt>Evidence</dt><dd>3</dd></div><div><dt>ATT&amp;CK</dt><dd>T1543.003</dd></div><div><dt>Tactics</dt><dd>Persistence, Privilege Escalation</dd></div></dl>
   <div class="relationship-source"><span>Source</span><strong>MirrorFace Attack against Japanese Organisations - JPCERT/CC Eyes</strong><small>High reliability</small></div>
   <a class="card-link" href="../relationships/tar_relationship_baa0c7a821cbbbe7cba5edd0/">View evidence →</a>
+</article><article class="card relationship-card searchable" data-search-text="ransomhouse  operates mragent software   malware  explicit deterministic from linear to complex: an upgrade in ransomhouse encryption high mragent ransomhouse ransomhouse uses a management tool called mragent, designed to automate and track ransomware deployments across different hypervisor systems in an esxi environment." data-target-type="software" data-confidence="explicit" data-source-ids="tar_source_5ec7bd23e66046e8b36ab3b5">
+  <div class="card-topline">
+    <div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div>
+    <span class="count-pill">1 source(s)</span>
+  </div>
+  <h3><a href="../relationships/tar_relationship_9b2d5bc1bb62e231bb5d3c54/">RansomHouse operates MrAgent</a></h3>
+  <p class="excerpt">MrAgent</p>
+  <dl class="relationship-facts"><div><dt>Confidence</dt><dd>Explicit</dd></div><div><dt>Resolution</dt><dd>Deterministic</dd></div><div><dt>Evidence</dt><dd>3</dd></div><div><dt>Software type</dt><dd>Malware</dd></div></dl>
+  <div class="relationship-source"><span>Source</span><strong>From Linear to Complex: An Upgrade in RansomHouse Encryption</strong><small>High reliability</small></div>
+  <a class="card-link" href="../relationships/tar_relationship_9b2d5bc1bb62e231bb5d3c54/">View evidence →</a>
+</article><article class="card relationship-card searchable" data-search-text="ransomhouse  uses mario software   malware  explicit deterministic from linear to complex: an upgrade in ransomhouse encryption high mario ransomhouse ransomhouse uses an encryptor known as mario." data-target-type="software" data-confidence="explicit" data-source-ids="tar_source_5ec7bd23e66046e8b36ab3b5">
+  <div class="card-topline">
+    <div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div>
+    <span class="count-pill">1 source(s)</span>
+  </div>
+  <h3><a href="../relationships/tar_relationship_982388ac1fd66d7505bbc035/">RansomHouse uses Mario</a></h3>
+  <p class="excerpt">Mario</p>
+  <dl class="relationship-facts"><div><dt>Confidence</dt><dd>Explicit</dd></div><div><dt>Resolution</dt><dd>Deterministic</dd></div><div><dt>Evidence</dt><dd>3</dd></div><div><dt>Software type</dt><dd>Malware</dd></div></dl>
+  <div class="relationship-source"><span>Source</span><strong>From Linear to Complex: An Upgrade in RansomHouse Encryption</strong><small>High reliability</small></div>
+  <a class="card-link" href="../relationships/tar_relationship_982388ac1fd66d7505bbc035/">View evidence →</a>
 </article><article class="card relationship-card searchable" data-search-text="teampcp deadcatx3 pcpcat shadow-water-058 shellforce operates teampcp cloud stealer software   malware  explicit deterministic weaponizing the protectors: teampcp’s multi-stage supply chain attack on security infrastructure high teampcp teampcp cloud stealer this initial wave introduced the teampcp primary payload, called teampcp cloud stealer." data-target-type="software" data-confidence="explicit" data-source-ids="tar_source_840f177f8bc026ea670b58bf">
   <div class="card-topline">
     <div class="badge-row"><span class="badge">Software</span> <span class="badge confidence">Explicit</span></div>

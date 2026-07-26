@@ -454,6 +454,253 @@
     {
       "action_time_text": null,
       "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Unit 42 describes alternative affiliate initial-access paths; no single victim path is asserted.",
+      "evidence": [
+        {
+          "block_index": 48,
+          "excerpt": "In this phase, attackers compromise victims through spear phishing emails or other social engineering techniques. In addition to email, initial access vectors include vulnerable systems in a victim's environment that attackers can compromise through zero-day or other exploits.",
+          "id": "tar_evidence_7e27b8cf53aaf32a336161d6",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:initial-access",
+      "id": "tar_action_b1fbd0d60dd24e0ca65f0116",
+      "label": "Gain initial access through phishing, social engineering, or exploitation",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 0,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 49,
+          "excerpt": "After achieving initial access, attackers typically use third-party tools and frameworks to explore the victim's network. The remainder of the infiltration phase includes reconnaissance to map the environment, privilege escalation, lateral movement and identifying valuable or se…",
+          "id": "tar_evidence_adf0693d6e6353abaf8e5434",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:recon-lateral",
+      "id": "tar_action_2bd33d64d9dfc287d018c2c4",
+      "label": "Reconnoiter, escalate privileges, and move laterally",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 1,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 63,
+          "excerpt": "After infiltrating the environment, an attacker deploys MrAgent onto the victim's ESXi hypervisor. MrAgent establishes a persistent connection to the attacker's command-and-control (C2) server.",
+          "id": "tar_evidence_76cafb38bcdeb6175dccce7a",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:deploy-mragent",
+      "id": "tar_action_beada4c2f52128b798373295",
+      "label": "Deploy MrAgent to the ESXi hypervisor",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 2,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 63,
+          "excerpt": "After infiltrating the environment, an attacker deploys MrAgent onto the victim's ESXi hypervisor. MrAgent establishes a persistent connection to the attacker's command-and-control (C2) server.",
+          "id": "tar_evidence_76cafb38bcdeb6175dccce7a",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:mragent-c2",
+      "id": "tar_action_250a9bd6f292a78c12c34500",
+      "label": "Establish persistent MrAgent command-and-control",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 3,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 64,
+          "excerpt": "Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…",
+          "id": "tar_evidence_a25f7ca750b604fa2ec83df9",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:exfiltrate",
+      "id": "tar_action_848205e2f4f63d6452863098",
+      "label": "Exfiltrate sensitive data through attacker-controlled infrastructure",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 4,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 64,
+          "excerpt": "Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…",
+          "id": "tar_evidence_a25f7ca750b604fa2ec83df9",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:execute-mario",
+      "id": "tar_action_3a7867d18d045055c3de8f6b",
+      "label": "Use MrAgent to download and execute the Mario encryptor",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 5,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "malware_behavior",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "Unit 42 splits the VM-encryption and ransom-note statements across separate source blocks; both EvidenceSpans are retained.",
+      "evidence": [
+        {
+          "block_index": 64,
+          "excerpt": "Attackers then issue commands from the C2 server to MrAgent for further operations like data exfiltration. After the data is exfiltrated, attackers instruct MrAgent to download and execute the Mario encryptor, which runs directly on the hypervisor to encrypt virtual machine (VM)…",
+          "id": "tar_evidence_a25f7ca750b604fa2ec83df9",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "block_index": 56,
+          "excerpt": "RansomHouse uses an encryptor known as Mario. After encrypting files, Mario drops a ransom note that contains instructions on how victims can recover their data.",
+          "id": "tar_evidence_869ccd36018de8cb9f506400",
+          "order": 1,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:encrypt-vms",
+      "id": "tar_action_2df1374b1f5260ff0890c32d",
+      "label": "Create the ransom note and encrypt targeted virtual-machine files",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 6,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
+      "activity_id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "assertion": "observed_capability",
+      "confidence": "high",
+      "date_basis": "unresolved",
+      "description": "",
+      "evidence": [
+        {
+          "block_index": 58,
+          "excerpt": "Once a victim's data has been stolen and encrypted, the attack chain transitions to the extortion phase. RaaS operators are generally responsible for this phase, which often involves negotiations via dedicated chat rooms. Operators validate their threats through strategic inform…",
+          "id": "tar_evidence_f7d9218dc6533b73b687b29f",
+          "order": 0,
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": null,
+      "flow_node_id": "flow-node:rh:unit42:extort",
+      "id": "tar_action_6c2d2b7408899f29dbeda1dd",
+      "label": "Negotiate, disclose victim information, and threaten publication",
+      "last_seen": null,
+      "relationship_ids": [],
+      "scope_slug": "unit42-esxi-operation",
+      "sequence_hint": 7,
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ]
+    },
+    {
+      "action_time_text": null,
+      "action_type": "action",
       "activity_id": "tar_activity_f229437da87e2df1482ac5a4",
       "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
       "assertion": "observed",
@@ -1522,6 +1769,34 @@
       "type": "incident"
     },
     {
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "date_basis": "bounded_source_range",
+      "date_precision": "month",
+      "description": "Unit 42 actor-level reconstruction of the RansomHouse RaaS chain: affiliate infiltration, MrAgent control, data theft, Mario deployment and encryption, followed by extortion.",
+      "evidence": [
+        {
+          "excerpt": "RansomHouse is a ransomware-as-a-service (RaaS) operation run by a group that we track as Jolly Scorpius. Recent samples of the associated binaries used in RansomHouse operations reveal a significant upgrade in encryption. This article explores the upgrade of RansomHouse encrypt…",
+          "role": "attribution",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "The scale of the group's operations is significant. At the time of this article, at least 123 victims were listed on the RansomHouse data leak site as having their data disclosed or sold since December 2021.",
+          "role": "date",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "first_seen": "2021-12-01T00:00:00Z",
+      "flow_path": "attack-flows/ransomhouse/?scope=unit42-esxi-operation",
+      "id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "last_seen": "2025-12-17T11:00:54Z",
+      "name": "RansomHouse ESXi operation observed since December 2021",
+      "relationship_ids": [],
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ],
+      "type": "operation"
+    },
+    {
       "actor_id": "tar_actor_ac4f9ded840a918ef8259ea5",
       "date_basis": "explicit_source_month",
       "date_precision": "month",
@@ -1545,6 +1820,6 @@
       "type": "campaign"
     }
   ],
-  "data_version": "v0.3.2",
+  "data_version": "v0.3.4",
   "schema": "threatactorradar.public-activities/v1"
 }

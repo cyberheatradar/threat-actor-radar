@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "id": "tar_actor_214d4cd8226ac1cd85dca51d",
+    "name": "RansomHouse"
+  },
+  "generation_method": "canonical-campaign-incident-projection-v1",
+  "records": [
+    {
+      "activity_date_basis": "bounded_source_range",
+      "activity_end": "2025-12-17T11:00:54Z",
+      "activity_start": "2021-12-01T00:00:00Z",
+      "actor_id": "tar_actor_214d4cd8226ac1cd85dca51d",
+      "date_precision": "month",
+      "description": "Unit 42 actor-level reconstruction of the RansomHouse RaaS chain: affiliate infiltration, MrAgent control, data theft, Mario deployment and encryption, followed by extortion.",
+      "detail_path": "operations/tar_activity_9a1e3c97712b3843b8bc14da/",
+      "evidence": [
+        {
+          "excerpt": "RansomHouse is a ransomware-as-a-service (RaaS) operation run by a group that we track as Jolly Scorpius. Recent samples of the associated binaries used in RansomHouse operations reveal a significant upgrade in encryption. This article explores the upgrade of RansomHouse encrypt…",
+          "role": "attribution",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        },
+        {
+          "excerpt": "The scale of the group's operations is significant. At the time of this article, at least 123 victims were listed on the RansomHouse data leak site as having their data disclosed or sold since December 2021.",
+          "role": "date",
+          "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5"
+        }
+      ],
+      "flow_path": "attack-flows/ransomhouse/?scope=unit42-esxi-operation",
+      "id": "tar_activity_9a1e3c97712b3843b8bc14da",
+      "record_type": "operation",
+      "relationship_ids": [],
+      "relationships": [],
+      "scope_status": "canonical_activity",
+      "source_id": "tar_source_5ec7bd23e66046e8b36ab3b5",
+      "source_ids": [
+        "tar_source_5ec7bd23e66046e8b36ab3b5"
+      ],
+      "source_publication_date": "2025-12-17T11:00:54Z",
+      "source_publication_display": "2025-12-17",
+      "source_reliability": "high",
+      "source_url": "https://unit42.paloaltonetworks.com/ransomhouse-encryption-upgrade",
+      "sources": [
+        {
+          "id": "tar_source_5ec7bd23e66046e8b36ab3b5",
+          "published_at": "2025-12-17T11:00:54Z",
+          "published_display": "2025-12-17",
+          "reliability": "high",
+          "title": "From Linear to Complex: An Upgrade in RansomHouse Encryption",
+          "url": "https://unit42.paloaltonetworks.com/ransomhouse-encryption-upgrade"
+        }
+      ],
+      "target_type_counts": {},
+      "title": "RansomHouse ESXi operation observed since December 2021"
+    }
+  ],
+  "schema": "threat-actor-radar.actor-activity/v1"
+}
